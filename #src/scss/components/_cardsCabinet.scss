@@ -67,7 +67,7 @@
             svg {
                 width: 16px;
                 height: 16px;
-                stroke: #a4a4a4;
+                stroke: #EB5757;
             }
         }
     }
@@ -75,8 +75,10 @@
     &__body {}
 
     &__status {
+        color: #219653;
+
         &--unactive {
-            color: #a4a4a4;
+            color: #EB5757;
         }
     }
 }

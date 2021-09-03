@@ -17,11 +17,13 @@
     <div class="site-container">
         @@include('components/_header.html')
         <main class="main">
-            <div class="section-banner">
+            <section class="step section-banner">
                 <div class="container">
-                    Личный кабинет
+                    <div class="step__inner">
+                        <div class="section-banner__title">Личный кабинет</div>
+                    </div>
                 </div>
-            </div>
+            </section>
             <section class="personal-cabinet">
                 <div class="container container-cabinet">
                     @@include('components/_cabinetAside.html')
@@ -59,6 +61,18 @@
                                 <div class="cabinet-date__item">
                                     <div class="cabinet-date__label">Количество детей:</div>
                                     <div class="cabinet-date__value">2</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Количество людей на содержании
+                                        <span class="block">(после 18 лет)</span>
+                                    </div>
+                                    <div class="cabinet-date__value">1</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Количество людей на содержании
+                                        <span class="block">(до 18 лет)</span>
+                                    </div>
+                                    <div class="cabinet-date__value">0</div>
                                 </div>
                             </div>
                         </div>

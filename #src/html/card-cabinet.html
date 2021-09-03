@@ -17,18 +17,20 @@
     <div class="site-container">
         @@include('components/_header.html')
         <main class="main">
-            <div class="section-banner">
+            <section class="step section-banner">
                 <div class="container">
-                    Личный кабинет
+                    <div class="step__inner">
+                        <div class="section-banner__title">Личный кабинет</div>
+                    </div>
                 </div>
-            </div>
+            </section>
             <section class="personal-cabinet">
                 <div class="container container-cabinet">
                     @@include('components/_cabinetAside.html')
                     <div class="cabinet-new">
                         <div class="cabinet-new__item">
                             <div class="cabinet-new__title">
-                                <span>Адрес места проживания</span>
+                                <span>Платежные карты</span>
                                 <button class="btn-edit" type="submit">
                                     <svg class="">
                                         <use xlink:href="./img/icons/icons.svg#edit"></use>

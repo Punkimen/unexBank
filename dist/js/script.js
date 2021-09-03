@@ -49,12 +49,6 @@ $(document).ready(function () {
         return false;
     });
 
-
-
-
-
-
-
     // scrollbar
     $('.online__content').mCustomScrollbar({
         axis: "y",
@@ -67,54 +61,9 @@ $(document).ready(function () {
     });
     // scrollbar end
     // slick silder
-    $('.intresting-slider').slick({
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        arrows: true,
-        prevArrow: '<div class="slider-arrow slider-arrow--prev"></div>',
-        nextArrow: '<div class="slider-arrow slider-arrow--next"></div>',
-        responsive: [
-            {
-                breakpoint: 992,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    dots: true,
-                    arrows: false,
-                }
-            },
-        ]
-    })
 
-    // slick silder end
-    const contentHeigh = () => {
-        let mainHeight = $('.instruction__wrapper').height();
-        let titleHeight = $('.instruction-content__title').height() + parseInt($('.instruction-content__title').css('marginBottom'));
-        let headHeight = $('.instruction-content__head').height() + parseInt($('.instruction-content__head').css('marginBottom'));
-        let upperHeight = titleHeight + headHeight;
-        let downHeight = $('.instruction-footer').height();
-        let contentHeight = mainHeight - upperHeight - downHeight - parseInt($('.instruction-content__text').css('paddingBottom'));
-        $('.instruction-content__text').height(contentHeight);
-    }
-    contentHeigh();
 });
 
-
-$('#about-link').on('click', function () {
-    $('.footer__left-about').slideToggle();
-    return false;
-})
-$('#useful-link').on('click', function () {
-    $('.footer__left-useful').slideToggle();
-    return false;
-})
 // modalWindow
 $('.modal-close').on('click', function () {
     $(this).parent().hide();
@@ -136,7 +85,9 @@ cabinetTypesPas.on('change', function () {
 $('#addCard').on('click', function () {
     $('.choosen-card__new').show()
 })
-
+$('.add-card__btn').on('click', function () {
+    $('.cabinet-new__item--newCard').show()
+})
 $('.credit-table__col--creditNum').on('click', function () {
     $(this).toggleClass('active')
     $(this).parent().next().slideToggle()
@@ -371,6 +322,10 @@ if (formSteps) {
             if (count != 5) {
                 count++
                 stepCount.innerText = count;
+                console.log(count);
+
+                $('.step-progress__item').eq(count - 1).addClass('current')
+                $('.step-progress__item').eq(count - 2).addClass('done')
                 return count
             }
         },
@@ -378,6 +333,10 @@ if (formSteps) {
             if (count != 2) {
                 count--
                 stepCount.innerText = count;
+                console.log(count);
+
+                $('.step-progress__item').eq(count).removeClass('current')
+                $('.step-progress__item').eq(count - 1).removeClass('done')
                 return count
             }
         },
@@ -649,13 +608,10 @@ if (form || form2) {
                             date: date,
                         })
                     }
-                    console.log(this.objInputs);
                 })
             })
         }
     }
-
     temporarily.addValue();
-
 }
 

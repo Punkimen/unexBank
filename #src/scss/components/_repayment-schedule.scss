@@ -22,7 +22,7 @@
             circle {
                 fill: none;
                 stroke-width: 5px;
-                stroke: #FFCF5C;
+                stroke: #EB0000;
                 transform: translate(5px, 5px);
                 stroke-dasharray: 470;
                 stroke-dashoffset: 470;
@@ -35,7 +35,7 @@
 
                 &:last-child {
                     stroke-dashoffset: calc(470 - (470 * 25) / 100);
-                    stroke: #FFCF5C;
+                    stroke: #EB0000;
                 }
             }
         }
@@ -302,7 +302,7 @@
 
     &__footer {
         padding: 0 14px;
-        background: linear-gradient(102.95deg, #2D4251 22.8%, #4E718A 84.04%);
+        background: linear-gradient(102.95deg, #E40300 22.8%, #B70208 84.04%);
         font-weight: 600;
         font-size: 15px;
         line-height: 22px;
@@ -320,7 +320,7 @@
 
     .mCSB_scrollTools {
         left: auto;
-        right: -5px;
+        right: 0px;
     }
 }
 
