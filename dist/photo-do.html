@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="css/vendor.min.css">
-    <link rel="stylesheet" href="css/style.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+<link rel="stylesheet" href="css/vendor.min.css">
+<link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -83,40 +85,54 @@
     </div>
 </header>
         <main class="main">
-            <div class="section-banner">
+            <section class="step section-banner">
                 <div class="container">
-                    Верификация
-                </div>
-            </div>
-
-            <section class="verification">
-                <div class="container verification-container">
-                    <div class="verification__title">Сделайте фото с документом</div>
-                    <div class="verification__subtitle"> Наведите камеру ровно перед собой, так чтобы было видно лицо
-                        полностью</div>
-                    <div class="photo__wrapper-do">
-                        <div class="photo__wrapper-img photo__wrapper-img--bg">
-                            <div id="my_camera"></div>
-                            <div id="my_result"></div>
-                        </div>
-                        <a href="javascript:void(take_snapshot())" class="photo__btn btn">Сделать фото</a>
-                    </div>
-                    <div class="photo__nowork">
-                        <div class="photo__nowork-text">Если камера не работает на телефоне, то нажмите кнопку "Не
-                            работает"
-                        </div>
-                        <div class="photo__nowork-btn btn">Не работает</div>
-                    </div>
-                    <div class="take__photo-phone">
-                        <div class="take__photo-text">Сделайте фото с документом и загрузите на сайт</div>
-                        <div class="photo__work-btn btn">Вернуть</div>
-                        <div class="photo-phone__btn btn">Сделать фото
-                            <input type="file" accept="video/*" capture="user">
-                        </div>
+                    <div class="step__inner">
+                        <div class="section-banner__title">Верификация</div>
                     </div>
                 </div>
             </section>
 
+            <section class="verification">
+                <div class="container verification-container">
+                    <div class="verification__title">ID- карта</div>
+                    <div class="photo-do">
+                        <div class="photo-do__tabs">
+                            <button class="photo-do__tab btn-reset active">Лицевая сторона</button>
+                            <button class="photo-do__tab btn-reset">Обратная сторона</button>
+                        </div>
+                        <div class="photo-do__body">
+                            <div class="photo-do__item show">
+                                <img class="photo-1" src="img/photo-example.png" alt="">
+                            </div>
+                            <div class="photo-do__item ">
+                                <img class="photo-2" src="img/photo-example.png" alt="">
+                            </div>
+                        </div>
+                        <div class="photo-do__descrition">Убедитесь, что это оригинал- не фотографируйте копии или
+                            изображения с других устройств</div>
+                        <button class="btn photo-do__btn">Сделать фото</button>
+                    </div>
+                </div>
+            </section>
+            <div class="photo-popup">
+                <div class="photo-popup__inner">
+                    <div class="photo-popup__body">
+                        <div class="photo-popup__title">Фото ID- карта</div>
+                        <div class="photo-popup__subtitle">Лицевая сторона</div>
+                        <div class="photo-popup__img-body">
+                            <div class="photo-popup__img">
+                                <video id="video" width="430" height="263" autoplay></video>
+                                <img class="your-photo" src="" alt="">
+                                <canvas id="canvas" width="430" height="263"></canvas>
+                            </div>
+                        </div>
+                        <div class="photo-popup__descr">Убедитесь, что паспорт хорошо осветлен</div>
+                        <button id="snap" data-photo="do" class="photo-popup__btn btn take-photo">Сделать
+                            фото</button>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer class="footer">
     <div class="container">
@@ -217,9 +233,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
     integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="
     crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"
     integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw=="
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
 <script src="js/script.js" defer></script>

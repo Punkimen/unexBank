@@ -35,12 +35,11 @@ $(document).ready(function () {
             $('.credit-calc__wrapper').append(creditCalc)
         }
     }
+
+
     calcBlockResize()
     $(window).resize(function () {
         let windowWidth = $(window).width();
-
-        contentHeigh();
-
         calcBlockResize()
         equalHeightContent($('.online__content'))
     })
@@ -523,26 +522,60 @@ if (formSteps) {
 
 // registration end
 // webcam
-let camera = document.querySelector('#my_camera')
-if (camera) {
-    Webcam.set({
-        width: 320,
-        height: 240,
-        dest_width: 320,
-        dest_height: 240,
-        image_format: 'jpeg',
-        jpeg_quality: 90,
-        force_flash: false,
-        flip_horiz: true,
-        fps: 45
+
+const video = document.querySelector('#video');
+const canvas = document.querySelector('#canvas');
+const context = canvas.getContext('2d');
+const photo = document.querySelector('.your-photo')
+const photoBtnSnap = document.querySelector("#snap")
+
+// Получаем доступ к камере
+if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+    // Не включаем аудио опцией `{ audio: true }` поскольку сейчас мы работаем только с изображениями
+    navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+        video.srcObject = stream;
+        video.play();
     });
-    Webcam.attach('#my_camera');
-    function take_snapshot() {
-        Webcam.snap(function (data_uri) {
-            document.getElementById('my_camera').innerHTML = '<img src="' + data_uri + '"/>';
-        });
-    }
 }
+
+
+
+// Обработчик события нажатия на кнопку "Сделать снимок"
+photoBtnSnap.addEventListener("click", function () {
+    if (photoBtnSnap.getAttribute('data-photo') === 'do') {
+        context.drawImage(video, 0, 0, 430, 263);
+        photo.setAttribute('src', canvas.toDataURL('image/png'));
+        photoBtnSnap.setAttribute('data-photo', "new")
+        photo.style.display = 'block'
+    } else {
+        photoBtnSnap.setAttribute('data-photo', "do")
+        photo.style.display = 'none'
+    }
+
+});
+
+
+
+// let camera = document.querySelector('#my_camera')
+// if (camera) {
+//     Webcam.set({
+//         width: 320,
+//         height: 240,
+//         dest_width: 320,
+//         dest_height: 240,
+//         image_format: 'jpeg',
+//         jpeg_quality: 90,
+//         force_flash: false,
+//         flip_horiz: true,
+//         fps: 45
+//     });
+//     Webcam.attach('#my_camera');
+//     function take_snapshot() {
+//         Webcam.snap(function (data_uri) {
+//             document.getElementById('my_camera').innerHTML = '<img src="' + data_uri + '"/>';
+//         });
+//     }
+// }
 // webcam
 
 // popup

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @@include('components/_styles.html')
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <section class="step section-banner">
+                <div class="container">
+                    <div class="step__inner">
+                        <div class="section-banner__title">Верификация</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="verification">
+                <div class="container verification-container">
+                    <div class="verification__title">Выбор документа</div>
+                    <div class="verification-choosen">
+                        <div class="verification-choosen__item">
+                            <img src="img/id-card.svg" alt="" class="verification-choosen__icon">
+                            <div class="verification-choosen__text">Платстиковая ID-карта</div>
+                        </div>
+                        <div class="verification-choosen__item">
+                            <img src="img/passport.svg" alt="" class="verification-choosen__icon">
+                            <div class="verification-choosen__text">Паспорт старого образца</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>
