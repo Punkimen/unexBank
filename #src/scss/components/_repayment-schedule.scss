@@ -1,0 +1,338 @@
+.loading-request {
+    display: flex;
+    align-items: center;
+
+    @media(max-width: $md5) {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__percent {
+        position: relative;
+        width: 158px;
+        height: 158px;
+
+        svg {
+            transform: rotate(-90deg);
+            position: relative;
+            width: 158px;
+            height: 158px;
+
+            circle {
+                fill: none;
+                stroke-width: 5px;
+                stroke: #FFCF5C;
+                transform: translate(5px, 5px);
+                stroke-dasharray: 470;
+                stroke-dashoffset: 470;
+                stroke-linecap: round;
+
+                &:first-child {
+                    stroke-dashoffset: 0;
+                    stroke: #EAEAEA;
+                }
+
+                &:last-child {
+                    stroke-dashoffset: calc(470 - (470 * 25) / 100);
+                    stroke: #FFCF5C;
+                }
+            }
+        }
+    }
+
+    &__number {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 15px;
+        line-height: 18px;
+        letter-spacing: -0.05em;
+    }
+
+    &__text {
+        font-size: 15px;
+        line-height: 18px;
+        color: #333;
+    }
+}
+
+.loading-circle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .loading-request__progress {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+        max-width: 245px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 13px;
+        line-height: 16px;
+
+        span {
+            font-weight: 600;
+        }
+    }
+}
+
+
+.repayment-schedule {
+
+    &__block {
+        margin-bottom: 30px;
+    }
+}
+
+.schedule-block {
+    padding: 30px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 45px rgba(37, 37, 37, 0.03);
+    border-radius: 10px;
+
+    &__header {
+        color: #333333;
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 9px;
+    }
+
+    &__status--active {
+        color: #219653;
+    }
+
+    &__item {
+        color: #2D4251;
+        display: flex;
+        align-items: baseline;
+
+        &:not(:last-child) {
+            margin-bottom: 7px;
+        }
+    }
+
+    &__label {
+        font-size: 10px;
+        line-height: 16px;
+        margin-right: 25px;
+    }
+
+    &__num {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+
+.repayment-card {
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start;
+
+        @media(max-width: $md4 + px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__loading {
+        margin-right: 33px;
+    }
+}
+
+.loading-request {
+
+    &__progress {
+        position: relative;
+    }
+
+    &__content {
+        color: #2D4251;
+        font-size: 12px;
+        line-height: 16px;
+        max-width: 103px;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__day {
+        font-weight: 500;
+        font-size: 26px;
+        line-height: 20px;
+
+        span {
+            display: block;
+            font-size: 16px;
+        }
+    }
+
+    &__date {
+        font-weight: 600;
+    }
+}
+
+.repayment-table {
+    width: 100%;
+    margin-bottom: 35px;
+
+    &__row {
+        padding: 9px 0 8px;
+        display: flex;
+        align-items: center;
+        border-top: 1px solid #EAECF0;
+
+        &:last-child {
+            border-bottom: 1px solid #EAECF0;
+        }
+
+        @media(max-width: $md4 + px) {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            justify-content: space-between;
+        }
+
+        @media(max-width: $md6 + px) {
+            display: block;
+        }
+    }
+
+    &__col {
+        width: 30%;
+
+        @media(max-width: $md4 + px) {
+            width: 100%;
+            margin-bottom: 15px;
+
+            &:nth-child(2n) {
+                text-align: right;
+
+                @media(max-width: $md6 + px) {
+                    text-align: left;
+                }
+            }
+        }
+
+        &:first-child {
+            width: 40%;
+
+            @media(max-width: $md4 + px) {
+                width: 100%;
+            }
+        }
+
+        &:not(:last-child) {
+            padding-right: 15px;
+        }
+    }
+
+    &__col--3 {
+        max-width: 187px;
+        width: 100%;
+    }
+
+    &__btn {
+        white-space: nowrap;
+    }
+}
+
+.schedule-table {
+
+    &__title {
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+
+    &__header {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        background: #F4F4F9;
+    }
+
+    &__row {
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #EAECF0;
+
+        @media(max-width: $md4 + px) {
+            padding: 14px 0;
+        }
+    }
+
+    &__col {
+        width: 33.3%;
+
+        &:not(:last-child) {
+            padding-right: 15px;
+        }
+
+        &:last-child {
+            text-align: right;
+        }
+    }
+
+    &__body {
+        font-size: 16px;
+        line-height: 20px;
+        color: #333333;
+        opacity: 0.7;
+    }
+
+    &__footer {
+        padding: 0 14px;
+        background: linear-gradient(102.95deg, #2D4251 22.8%, #4E718A 84.04%);
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        color: #FFFFFF;
+
+        .schedule-table__col {
+            width: 50%;
+        }
+    }
+}
+
+.table-scroll {
+    max-height: 485px;
+    overflow-y: auto;
+
+    .mCSB_scrollTools {
+        left: auto;
+        right: -5px;
+    }
+}
+
+.status {
+    font-size: 16px;
+    line-height: 20px;
+
+    &.redeemed {
+        color: #219653;
+    }
+
+    &.active {
+        color: #EB5757;
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Социальные сети</span>
+                            </div>
+                            <form class="cabinet-new__form social-cabinet">
+                                <div class="social-cabinet__description">
+                                    Указав ссылки на социальные сети, где вы
+                                    зарегистрированы, увеличит ваши шансы в дальнейшем на принятие позитивного
+                                    решения при оформлении заявки на кредит
+                                </div>
+                                <div class="social-cabinet__link">
+                                    <div class="cabinet-new__input">
+                                        <label class="cabinet-new__label" for="promo">У меня есть промо-код</label>
+                                        <input type="name" name="promo" value="facebook.com/username">
+                                    </div>
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                    </svg>
+                                </div>
+
+                                <div class="cabinet-new__btns">
+                                    <button id="addLink" class="social-cabinet__btn btn btn-transparent"
+                                        type="submit">Добавить ссылку</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+.choosen-card {
+    &__wrapper {
+        min-height: auto;
+        margin-bottom: 60px;
+    }
+
+    &__table {
+        margin-bottom: 46px;
+    }
+
+    &__row {
+        padding: 15px 5px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-bottom: 1px solid #EAECF0;
+
+        @media(max-width: $md6 + px) {
+            grid-template-columns: 65% 35%;
+        }
+    }
+
+    &__col--status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__status {
+        font-size: 14px;
+        line-height: 20px;
+
+        &.active {
+            font-weight: bold;
+            color: #219653;
+        }
+
+        &.unactive {
+            color: #A4A4A4;
+        }
+    }
+
+    &__btn {
+        max-width: 187px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    &__new {
+        margin-bottom: 15px;
+        display: none;
+    }
+}
+
+.delete-card__btn {
+    &:hover {
+        svg {
+            stroke: $colorOrange;
+        }
+    }
+
+    svg {
+        stroke: #a4a4a4;
+        display: block;
+        width: 20px;
+        height: 20px;
+        transition: all ease .2s;
+    }
+}

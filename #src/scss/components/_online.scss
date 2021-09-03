@@ -1,0 +1,135 @@
+.online {
+    padding: 90px 0;
+    background: #fff;
+
+    @media(max-width: $md3 + px) {
+        padding: 50px 0;
+    }
+
+    &-container {
+        @media(max-width: $md3 + px) {
+            padding: 0;
+        }
+    }
+}
+
+.online__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1322px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media(max-width: $md3 + px) {
+        flex-direction: column-reverse;
+    }
+}
+
+.online__images {
+    max-width: 616px;
+    width: 100%;
+
+    @media(max-width: $md3 + px) {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.online__images img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.online__content {
+    max-width: 500px;
+    min-height: 300px;
+
+    @media(max-width: $md3 + px) {
+        max-height: 350px;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+}
+
+.online__content-title {
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 700;
+    padding-bottom: 17px;
+
+    @media(max-width: $md6 + px) {
+        font-size: 16px;
+    }
+}
+
+.online__content-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding-right: 25px;
+}
+
+.online__content-text span {
+    display: block;
+}
+
+.online__content-text span+span {
+    margin-top: 15px;
+}
+
+.online {
+
+    &__content-link {
+        position: relative;
+        display: inline-block;
+        padding: 20px 0;
+        font-size: 20px;
+        line-height: 20px;
+        display: inline-flex;
+        align-items: center;
+        color: $colorOrange;
+        transition: all .2s;
+
+        @media(max-width: $md4 + px) {
+            font-size: 16px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background: $colorOrange;
+            transition: all .2s;
+        }
+
+        &:hover {
+            color: $colorGrey;
+
+            &::before {
+                background: $colorGrey;
+            }
+
+            .Arrow-link {
+                fill: $colorGrey;
+            }
+        }
+    }
+}
+
+.Arrow-link {
+    display: block;
+    width: 20px;
+    margin-left: 8px;
+    height: 10px;
+    fill: $colorOrange;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}

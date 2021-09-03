@@ -1,0 +1,33 @@
+.cabinet-new {
+
+    &__table {}
+}
+
+.loan-table {
+    font-size: 16px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+    margin-bottom: 50px;
+
+    @media(max-width: $md5 + px) {
+        font-size: 12px;
+    }
+
+    &__body {}
+
+    &__row {}
+
+    &__col {
+        padding: 14px;
+        border: 1px solid #EAECF0;
+    }
+
+    &__col--val {
+        width: 160px;
+
+        @media(max-width: $md5 + px) {
+            width: auto;
+        }
+    }
+}

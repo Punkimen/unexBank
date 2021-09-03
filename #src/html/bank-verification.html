@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Верификация
+                </div>
+            </div>
+
+            <section class="verification">
+                <div class="container verification-container">
+                    <div class="verification__title">Верификация с помощью BankID</div>
+                    <div class="verification__subtitle">Выберете банк, в котором вы являетесь клиентом</div>
+                    <div class="bank__wrapper">
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-1.png" alt="">
+                            <div class="bank__item-name">Vostok</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-2.png" alt="">
+                            <div class="bank__item-name">Mono</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-3.png" alt="">
+                            <div class="bank__item-name">Alfa</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-4.png" alt="">
+                            <div class="bank__item-name">Privat</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-5.png" alt="">
+                            <div class="bank__item-name">Concord</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-6.png" alt="">
+                            <div class="bank__item-name">Accord</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-7.png" alt="">
+                            <div class="bank__item-name">Otp</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-8.png" alt="">
+                            <div class="bank__item-name">A-Bank</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-9.png" alt="">
+                            <div class="bank__item-name">Kredobank</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-10.png" alt="">
+                            <div class="bank__item-name">MTB</div>
+                        </a>
+                        <a href="#" class="bank__item-bank">
+                            <img src="img/bank-11.png" alt="">
+                            <div class="bank__item-name">Idea</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            @@include('components/_stepBanner.html')
+            <section class="reg">
+                <div class="container reg-container">
+                    <div class="reg__calc">
+                        <div class="reg__calc-title">Заявка на кредит</div>
+                        <div class="reg__calc-row">
+                            <div class="reg__calc-text">Вы получите</div>
+                            <div class="reg__calc-sum">8 000 грн</div>
+                        </div>
+                        <div class="reg__calc-row">
+                            <div class="reg__calc-text">Комиссия</div>
+                            <div class="reg__calc-sum">0 грн</div>
+                        </div>
+                        <div class="reg__calc-row">
+                            <div class="reg__calc-text">Ставка в день</div>
+                            <div class="reg__calc-sum">0,01%</div>
+                        </div>
+                        <div class="reg__calc-row">
+                            <div class="reg__calc-text">К возврату</div>
+                            <div class="reg__calc-sum">8 055 грн</div>
+                        </div>
+                        <div class="reg__calc-row">
+                            <div class="reg__calc-text_date">Дата погашения</div>
+                            <div class="reg__calc-sum_date">30.09.2020</div>
+                        </div>
+                        <div class="reg__calc-use">
+                            <div class="reg__use-row">
+                                <div class="reg__use-title">Сумма кредита</div>
+                                <div class="info__inp">
+                                    <div class="info__inp-btn sum_minus">
+                                        <span></span>
+                                    </div>
+                                    <input type="text" class="text" id="summ" name="s" value="8000" data-max="10000"
+                                        data-min="1000" data-step="500" data-k="1" multiple>
+                                    <div class="info__inp-btn sum_plus">
+                                        <span></span>
+                                        <span class="up"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="reg__use-row">
+                                <div class="reg__use-title">Срок кредита</div>
+                                <div class="info__inp">
+                                    <div class="info__inp-btn date_minus">
+                                        <span></span>
+                                    </div>
+                                    <input type="text" class="text" id="term" name="s" value="20" data-max="30"
+                                        data-min="1" data-min-event="10" data-step="1" data-k="1">
+                                    <div class="info__inp-btn date_plus">
+                                        <span></span>
+                                        <span class="up"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="reg__wrapper">
+                        <div class="reg__step-item active">
+                            <div class="reg__form">
+                                <div class="reg__form-right">
+                                    <h3 class="reg__form-title">Документы</h3>
+                                    <div class="document-item">
+                                        <div class="passport-text">Фото клиента с паспортом в руке</div>
+                                        <div class="file">
+                                            <input type="file">
+                                            <span class="select-file">Выберите файл</span>
+                                            <span class="downloaded-file">Файл загружен</span>
+                                        </div>
+                                    </div>
+                                    <div class="document-item">
+                                        <div class="passport-text">Скан/фото ИИН</div>
+                                        <div class="file">
+                                            <input type="file">
+                                            <span class="select-file">Выберите файл</span>
+                                            <span class="downloaded-file">Файл загружен</span>
+                                        </div>
+                                    </div>
+                                    <div class="document-item">
+                                        <div class="passport-text">Скан/фото 2 и 3 страницы паспорта</div>
+                                        <div class="file">
+                                            <input type="file">
+                                            <span class="select-file">Выберите файл</span>
+                                            <span class="downloaded-file">Файл загружен</span>
+                                        </div>
+                                    </div>
+                                    <div class="document-item">
+                                        <div class="passport-text">Скан/фото страницы паспорта с актуальным фото</div>
+                                        <div class="file">
+                                            <input type="file">
+                                            <span class="select-file">Выберите файл</span>
+                                            <span class="downloaded-file">Файл загружен</span>
+                                        </div>
+                                    </div>
+                                    <div class="document-item">
+                                        <div class="passport-text">Скан/фото страницы с пропиской</div>
+                                        <div class="file">
+                                            <input type="file">
+                                            <span class="select-file">Выберите файл</span>
+                                            <span class="downloaded-file">Файл загружен</span>
+                                        </div>
+                                    </div>
+                                    <div class="document-item">
+                                        <div class="passport-text">Скан/фото другого документа</div>
+                                        <div class="file">
+                                            <input type="file">
+                                            <span class="select-file">Выберите файл</span>
+                                            <span class="downloaded-file">Файл загружен</span>
+                                        </div>
+                                    </div>
+                                    <div class="document-item">
+                                        <div class="passport-text">Скан/фото дополнительно</div>
+                                        <div class="file">
+                                            <input type="file">
+                                            <span class="select-file">Выберите файл</span>
+                                            <span class="downloaded-file">Файл загружен</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reg__form-btns">
+                            <a class="reg__form-btn btn" href="#">Отправить форму</a>
+                            <a class="reg__form-back" href="#">Вернуться назад</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

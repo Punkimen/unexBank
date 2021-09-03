@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Адрес места проживания</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="cabinet-new__form">
+                                <table class="cabinet-new__table cards-table">
+                                    <thead class="cards-table__header">
+                                        <tr class="cards-table__row">
+                                            <td colspan="3" class="cards-table__col">Номер карты</td>
+                                            <td colspan="3" class="cards-table__col">Статус</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="cards-table__body">
+                                        <tr class="cards-table__row">
+                                            <td colspan="3" class="cards-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#credit-card"></use>
+                                                    </svg>
+                                                    52 **** 4455
+                                                </span>
+                                            </td>
+                                            <td colspan="2" class="cards-table__col" data-label="Статус">
+                                                <span class="cards-table__status">Активирована</span>
+                                            </td>
+                                            <td class="cards-table__col cards-table__col--delete">
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="cards-table__row">
+                                            <td colspan="3" class="cards-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#credit-card"></use>
+                                                    </svg>
+                                                    52 **** 4455
+                                                </span>
+                                            </td>
+                                            <td colspan="2" class="cards-table__col" data-label="Статус">
+                                                <span class="cards-table__status">Активирована</span>
+                                            </td>
+                                            <td class="cards-table__col cards-table__col--delete">
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="cards-table__row">
+                                            <td colspan="3" class="cards-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#credit-card"></use>
+                                                    </svg>
+                                                    52 **** 4455
+                                                </span>
+                                            </td>
+                                            <td colspan="2" class="cards-table__col" data-label="Статус">
+                                                <span
+                                                    class="cards-table__status cards-table__status--unactive">Неактивна</span>
+                                            </td>
+                                            <td class="cards-table__col cards-table__col--delete">
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="add-card__btn btn btn-transparent" type="button">Добавить карту</button>
+                            </form>
+                        </div>
+                        <div class="cabinet-new__item cabinet-new__item--newCard">
+                            <div class="cabinet-new__title">
+                                <span>Новая карта</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="cabinet-new__form">
+                                <div class="cabinet-new__inner">
+                                    <div class="cabinet-new__left">
+                                        <div class="cabinet-new__input">
+                                            <label class="cabinet-new__label" for="cardNum">Номер карты*</label>
+                                            <input type="name" name="cardNum">
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-new__right">
+                                        <div class="cabinet-new__inputs cabinet-new__inputs--equal">
+                                            <div class="cabinet-new__input">
+                                                <label class="cabinet-new__label" for="passportTerm">Срок
+                                                    действия*</label>
+                                                <input type="name" name="passportTerm" placeholder="11.12.___">
+                                            </div>
+                                            <div class="cabinet-new__input">
+                                                <label class="cabinet-new__label" for="CVV">CVV*</label>
+                                                <input type="name" name="CVV" placeholder="***">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet-new__btns">
+                                    <button class="cabinet-new__btn btn" type="submit">Сохранить карту</button>
+                                    <button class="cabinet-new__btn btn-str" type="button">Отменить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

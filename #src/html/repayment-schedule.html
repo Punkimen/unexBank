@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Погасить кредит</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="repayment-schedule">
+                                <div class="repayment-schedule__block schedule-block">
+                                    <div class="schedule-block__header">
+                                        <div class="schedule-block__name">Кредит №345678</div>
+                                        <div class="schedule-block__status schedule-block__status--active">
+                                            Активный
+                                        </div>
+                                    </div>
+                                    <div class="schedule-block__content">
+                                        <div class="schedule-block__item">
+                                            <div class="schedule-block__label">Сумма кредита</div>
+                                            <div class="schedule-block__num">50 000 грн</div>
+                                        </div>
+                                        <div class="schedule-block__item">
+                                            <div class="schedule-block__label">Дата выдачи</div>
+                                            <div class="schedule-block__num">12.05.2022</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="repayment-schedule__card repayment-card">
+                                    <div class="repayment-card__wrapper">
+                                        <div class="repayment-card__loading">
+                                            <div class="loading-request__progress">
+                                                <div class="loading-request__percent">
+                                                    <svg>
+                                                        <circle cx="75" cy="75" r="75"></circle>
+                                                        <circle cx="75" cy="75" r="75"></circle>
+                                                    </svg>
+                                                    <div class="loading-request__content">
+                                                        <div class="loading-request__day">24
+                                                            <span>дней</span></div>
+                                                        <div class="loading-request__label">до следующего платежа</div>
+                                                        <div class="loading-request__date">12.07.2021</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="repayment-card__table repayment-table">
+                                            <div class="cabinet-new__input repayment-table__select">
+                                                <div class="select">
+                                                    <label class="cabinet-new__label" for="region">Платежная
+                                                        карта</label>
+                                                    <select name="region">
+                                                        <option value="" hidden disabled selected>Выберите карту из
+                                                            списка
+                                                        </option>
+                                                        <option>800000000</option>
+                                                        <option>800000000</option>
+                                                    </select>
+                                                    <div class="select_arrow">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="repayment-table__row">
+                                                <div class="repayment-table__col repayment-table__col--label">Регулярный
+                                                    платеж</div>
+                                                <div class="repayment-table__col repayment-table__col--2">8 000 грн
+                                                </div>
+                                                <div class="repayment-table__col repayment-table__col--3">
+                                                    <button class="repayment-table__btn btn">Оплатить</button>
+                                                </div>
+                                            </div>
+                                            <div class="repayment-table__row">
+                                                <div class="repayment-table__col repayment-table__col--label">Общая
+                                                    сумма к погашению</div>
+                                                <div class="repayment-table__col repayment-table__col--2">42 200 грн
+                                                </div>
+                                                <div class="repayment-table__col repayment-table__col--3">
+                                                    <button class="repayment-table__btn btn">Погасить общую
+                                                        сумму</button>
+                                                </div>
+                                            </div>
+                                            <div class="repayment-table__row">
+                                                <div class="repayment-table__col repayment-table__col--label">Другая
+                                                    сумма к погашению</div>
+                                                <div class="repayment-table__col repayment-table__col--2">
+                                                    <input class="repayment-table__input"></input>
+                                                </div>
+                                                <div class="repayment-table__col repayment-table__col--3">
+                                                    <button class="repayment-table__btn btn">Погасить другую
+                                                        сумму</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="repayment-schedule__table schedule-table">
+                                    <div class="schedule-table__title">График платежей</div>
+                                    <div class="schedule-table__header">
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">Сумма</div>
+                                            <div class="schedule-table__col">Статус</div>
+                                        </div>
+                                    </div>
+                                    <div class="schedule-table__body table-scroll">
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status redeemed">Погашеный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status active">Активный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status active">Активный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status active">Активный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status active">Активный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status active">Активный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status active">Активный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status active">Активный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status active">Активный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status redeemed">Погашеный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status redeemed">Погашеный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status redeemed">Погашеный</span>
+                                            </div>
+                                        </div>
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Дата платежа</div>
+                                            <div class="schedule-table__col">8 000 грн</div>
+                                            <div class="schedule-table__col">
+                                                <span class="status redeemed">Погашеный</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="schedule-table__footer">
+                                        <div class="schedule-table__row">
+                                            <div class="schedule-table__col">Общая сумма к погашению</div>
+                                            <!-- <div class="schedule-table__col"></div> -->
+                                            <div class="schedule-table__col">
+                                                42 200 грн
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

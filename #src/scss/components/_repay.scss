@@ -1,0 +1,117 @@
+.repay {
+    background: url(../img/repay_bg.jpg);
+    padding: 45px 0 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @media(max-width: $md3 + px) {
+        padding: 50px 0;
+    }
+
+    &__title {
+        color: #fff;
+    }
+}
+
+.repay__inner {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+
+    @media(max-width: $md2 + px) {
+        display: block;
+    }
+}
+
+.repay__item {
+    max-width: 555px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+    padding: 0px 0px 0px 40px;
+    cursor: pointer;
+
+    @media(max-width: $md2 + px) {
+        max-width: 100%;
+    }
+
+    @media(max-width: $md5 + px) {
+        padding: 20px;
+    }
+}
+
+.repay__item+.repay__item {
+    margin-left: 10px;
+
+    @media(max-width: $md2 + px) {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.repay__link {
+    display: block;
+    color: #333
+}
+
+.repay__item-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.repay__item-content {
+    max-width: 255px;
+    margin-right: auto;
+
+    @media(max-width: $md5 + px) {
+        margin: 0 auto;
+    }
+}
+
+.repay__item-title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: #333;
+}
+
+.repay__item:first-child .repay__item-images {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.repay__item-images {
+
+    @media(max-width: $md5 + px) {
+        display: none;
+    }
+}
+
+.repay__item-images img {
+    display: block;
+}
+
+.repay__item-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    padding-bottom: 40px;
+    color: #333;
+}
+
+.repay__item-icon {
+    display: flex;
+    align-items: center;
+}
+
+.repay__item-icon img {
+    display: block;
+    margin-right: 20px;
+}

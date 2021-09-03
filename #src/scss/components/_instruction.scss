@@ -1,0 +1,160 @@
+.site-container {}
+
+.main {}
+
+.instruction {
+    padding: 90px 0;
+    background: #E5E5E5;
+
+    @media(max-width: $md3 + px) {
+        padding: 60px 0 50px;
+    }
+
+    @media(max-width: $md5 + px) {
+        padding: 40px 0 80px;
+    }
+
+    &-container {
+        padding: 0;
+    }
+
+    &__wrapper {
+        background: #FFFFFF;
+        padding: 40px 25px 60px 60px;
+        height: 1200px;
+        position: relative;
+        overflow-y: hidden;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @media(max-width: $md3 + px) {
+            height: 910px;
+            padding: 30px 30px 30px 40px;
+        }
+
+        @media(max-width: $md5 + px) {
+            padding: 25px 20px 50px;
+        }
+    }
+
+    &__wrapper-content {}
+
+    &__wrapper-footer {
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.container {}
+
+.instruction-content {
+
+    &__head {
+        max-width: 300px;
+        width: 100%;
+        margin-left: auto;
+        text-align: center;
+        line-height: 25px;
+        color: #000;
+        margin-bottom: 40px;
+
+        span {
+            display: block;
+        }
+
+        @media(max-width: $md5 + px) {
+            margin: 0 auto 30px;
+        }
+    }
+
+    &__title {
+        max-width: 785px;
+        margin: 0 auto 55px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 25px;
+
+        @media(max-width: $md3 + px) {
+            margin-bottom: 30px;
+        }
+
+        @media(max-width: $md5 + px) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+    &__text {
+        color: #505050;
+        padding-bottom: 45px;
+
+        .mCSB_inside>.mCSB_container {
+            padding-left: 0;
+            padding-right: 20px;
+        }
+
+        .mCSB_scrollTools {
+            left: auto;
+            right: 0;
+        }
+
+        @media(max-width: $md5 + px) {
+            padding-bottom: 30px;
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+
+    &__paragraph {
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.instruction-footer {
+
+    &__link {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        line-height: 20px;
+
+        @media(max-width: $md5 + px) {
+            font-size: 14px;
+        }
+    }
+
+    &__link--back {
+        border-bottom: 1px solid $colorBlue;
+        color: $colorBlue;
+
+        .Arrow-link {
+            transform: rotate(180deg);
+            -webkit-transform: rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            margin-right: 8px;
+            margin-left: 0;
+        }
+    }
+
+    &__link--download {
+        color: #EB5757;
+
+        .svg-download {
+            width: 14px;
+            height: 14px;
+            margin-left: 8px;
+        }
+    }
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>История транзакций</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="cabinet-new__form">
+                                <table class="cabinet-new__table transiction-table">
+                                    <thead class="transiction-table__header">
+                                        <tr class="transiction-table__row">
+                                            <td class="transiction-table__col">
+                                                <span>Номер карты</span>
+                                            </td>
+                                            <td class="transiction-table__col">
+                                                <span>Номер</span>
+                                            </td>
+                                            <td class="transiction-table__col">
+                                                <span>Сумма</span>
+                                            </td>
+                                            <td class="transiction-table__col">
+                                                <span>Дата</span>
+                                            </td>
+                                            <td class="transiction-table__col">
+                                                <span>Тип</span>
+                                            </td>
+                                            <td class="transiction-table__col">
+                                                <span>Статус</span>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="transiction-table__body">
+                                        <tr class="transiction-table__row">
+                                            <td class="transiction-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#transaction"></use>
+                                                    </svg>
+                                                    59 **** 4894
+                                                </span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Номер">
+                                                <span>48658489816</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Сумма">
+                                                <span>12 000 грн</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Дата">
+                                                <span>05.12.2019</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Тип">
+                                                <span>Выдача кредита</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Статус">
+                                                <span class="status-transiction">Успешно</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="transiction-table__row">
+                                            <td class="transiction-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#x"></use>
+                                                    </svg>
+                                                    59 **** 4894
+                                                </span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Номер">
+                                                <span>48658489816</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Сумма">
+                                                <span>12 000 грн</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Дата">
+                                                <span>05.12.2019</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Тип">
+                                                <span>Выдача кредита</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Статус">
+                                                <span
+                                                    class="status-transiction status-transiction--rejected">Отклонено</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="transiction-table__row">
+                                            <td class="transiction-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#transaction"></use>
+                                                    </svg>
+                                                    59 **** 4894
+                                                </span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Номер">
+                                                <span>48658489816</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Сумма">
+                                                <span>12 000 грн</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Дата">
+                                                <span>05.12.2019</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Тип">
+                                                <span>Выдача кредита</span>
+                                            </td>
+                                            <td class="transiction-table__col" data-label="Статус">
+                                                <span class="status-transiction">Успешно</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

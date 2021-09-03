@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <section class="step section-banner">
+                <div class="container">
+                    <div class="step__inner">
+                        <div class="section-banner__title">Верификация</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="verification">
+                <div class="container verification-container">
+                    <div class="verification__content">
+                        <div class="verification__title">Для оформления нового кредита необходимо пройти верификацию
+                            личности.</div>
+                        <div class="verification__subtitle">Выберете удобный для вас способ:</div>
+                        <div class="verification-types">
+                            <a href="#" class="verification-types__item">
+                                <div class="verification-types__img">
+                                    <img src="img/verification_1.png" alt="">
+                                </div>
+                                <div class="verification-types__label">Фото с документом</div>
+                            </a>
+                            <a href="#" class="verification-types__item">
+                                <div class="verification-types__img">
+                                    <img src="img/verification_2.png" alt="">
+                                </div>
+                                <div class="verification-types__label">С помощью Национального Банка Украины</div>
+                            </a>
+                            <a href="#" class="verification-types__item">
+                                <div class="verification-types__img">
+                                    <img src="img/verification_2.png" alt="">
+                                </div>
+                                <div class="verification-types__label">С помощью Интегрированной системы электоронной
+                                    идентификации</div>
+                            </a>
+                            <a href="#" class="verification-types__item">
+                                <div class="verification-types__img">
+                                    <img src="img/verification_3.png" alt="">
+                                </div>
+                                <div class="verification-types__label">С помощью Интегрированной системы электоронной
+                                    идентификации</div>
+                            </a>
+                            <a href="#" class="verification-types__item">
+                                <div class="verification-types__img">
+                                    <img src="img/verification_4.png" alt="">
+                                </div>
+                                <div class="verification-types__label">С помощью системы BankID</div>
+                            </a>
+                            <a href="#" class="verification-types__item">
+                                <div class="verification-types__img">
+                                    <img src="img/verification_4.png" alt="">
+                                </div>
+                                <div class="verification-types__label">С помощью Интегрированной системы электоронной
+                                    идентификации</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+.any-card {
+    padding: 120px 0;
+
+    @media(max-width: $md4 + px) {
+        padding: 100px 0 100px;
+    }
+
+    @media(max-width: $md5 + px) {
+        padding: 47px 0 80px;
+    }
+
+    &__subtitle-text {
+        margin-bottom: 50px;
+    }
+
+    &__steps {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @media(max-width: $md5 + px) {
+            flex-direction: column;
+        }
+    }
+
+    &__step {
+        position: relative;
+        width: 22%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        @media(max-width: $md4 + px) {
+            width: 30%;
+        }
+
+        @media(max-width: $md5 + px) {
+            max-width: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        &:not(:last-child) {
+            @media(max-width: $md5 + px) {
+                margin-bottom: 65px;
+            }
+
+            &::before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 40px;
+                right: -68%;
+                width: calc(100% + 75px);
+                height: 1px;
+                border-bottom: 2px dashed $colorOrange;
+
+                @media(max-width: $md3 + px) {
+                    width: calc(100% + 30px);
+                }
+
+                @media(max-width: $md4 + px) {
+                    width: 50%;
+                    right: 0;
+                }
+
+                @media(max-width: $md5 + px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__step-icon {
+        margin-bottom: 15px;
+        flex-grow: 1;
+    }
+
+    &__step-label {
+        font-family: 'Roboto', sans-serif;
+        flex-grow: 1;
+        font-weight: bold;
+        font-size: 17px;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    &__step-text {
+        flex-grow: 1;
+        color: #505050;
+    }
+}
+
+.section {
+
+    &__title {}
+
+    &__subtitl-text {}
+}

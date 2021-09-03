@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Адрес места проживания</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="cabinet-new__date cabinet-date">
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Страна:</div>
+                                    <div class="cabinet-date__value">Украина</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Индекс:</div>
+                                    <div class="cabinet-date__value">02215</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Область:</div>
+                                    <div class="cabinet-date__value">Киевская</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Район:</div>
+                                    <div class="cabinet-date__value">Васильковский</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Тип населенного пункта:</div>
+                                    <div class="cabinet-date__value">Город</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Населенный пункт:</div>
+                                    <div class="cabinet-date__value">Васильков</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Тип улицы:</div>
+                                    <div class="cabinet-date__value">Улица</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Улица:</div>
+                                    <div class="cabinet-date__value">Данилевского</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Дом:</div>
+                                    <div class="cabinet-date__value">35 Б</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Корпус:</div>
+                                    <div class="cabinet-date__value">12</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Квартира:</div>
+                                    <div class="cabinet-date__value">85</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Форма собственности:</div>
+                                    <div class="cabinet-date__value">Собственник</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Срок проживания:</div>
+                                    <div class="cabinet-date__value">12 лет</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Адрес регистрации</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="cabinet-new__date cabinet-date">
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label cabinet-date__label--w50">Совпадает с адресом
+                                        проживания</div>
+                                    <div class="cabinet-date__value"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+.questions {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 120px;
+
+    @media(max-width: $md4 + px) {
+        padding-bottom: 100px;
+    }
+
+    @media(max-width: $md5 + px) {
+        padding-bottom: 80px;
+    }
+
+    &__title {}
+
+    &__subtitle-text {
+        margin-bottom: 50px;
+    }
+}
+
+.questions-item {
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &.active {
+        .questions-item__arrow {
+            transform: rotate(0deg);
+        }
+    }
+
+    &__header {
+        padding: 32px 32px 32px 45px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media(max-width: $md4 + px) {
+            padding: 30px;
+        }
+
+        @media(max-width: $md5 + px) {
+            padding: 15px;
+        }
+    }
+
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__num {
+        margin-right: 25px;
+        font-weight: bold;
+        font-size: 26px;
+        line-height: 30px;
+        color: $colorOrange;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 28px;
+        color: #414143;
+
+        @media(max-width: $md4 + px) {
+            font-size: 22px;
+        }
+
+        @media(max-width: $md5 + px) {
+            font-size: 14px;
+        }
+    }
+
+    &__arrow {
+        cursor: pointer;
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(180deg);
+        transition: all ease .2s;
+
+        svg {
+            display: block;
+            fill: $colorOrange;
+            width: 12px;
+            height: 8px;
+
+        }
+    }
+
+    &__body {
+        display: none;
+        padding: 0 32px 42px 114px;
+
+        @media(max-width: $md4 + px) {
+            padding: 0 30px 30px;
+        }
+
+        @media(max-width: $md5 + px) {
+            padding: 0 15px 15px;
+            font-size: 14px;
+        }
+    }
+
+    &__doc {
+        list-style-type: disc;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        line-height: 24px;
+    }
+
+    &__doc-name {
+        padding-right: 7px;
+    }
+
+    &__doc-download {
+        svg {
+            display: block;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}

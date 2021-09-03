@@ -1,0 +1,38 @@
+.document-table {
+    &__header {
+        font-weight: 600;
+        font-size: 15px;
+        line-height: 22px;
+        color: #333333;
+    }
+
+    &__row {}
+
+    &__col {
+        font-size: 16px;
+
+        &--no-flex {
+            @media(max-width: $md4 + px) {
+                display: block;
+            }
+        }
+    }
+
+    &__doc {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            font-size: 14px;
+            color: #2D4251;
+            text-decoration: underline;
+        }
+
+        svg {
+            width: 14px;
+            height: 14px;
+            fill: #a4a4a4;
+        }
+    }
+}

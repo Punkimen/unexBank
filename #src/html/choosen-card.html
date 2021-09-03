@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <section class="step section-banner">
+                <div class="container">
+                    <div class="step__inner">
+                        <div class="section-banner__title">Выбор карты</div>
+                    </div>
+                </div>
+            </section>
+            <section class="reg">
+                <div class="container reg-container">
+                    <div class="reg__wrapper choosen-card__wrapper">
+                        <div class="reg__step-item active">
+                            <form class="ver-card" id="choosen-card">
+                                <div class="reg__form">
+                                    <div class="reg__form-left mr-0">
+                                        <h3 class="reg__form-title">Выберите карту для получения кредита</h3>
+                                        <div class="choosen-card__table">
+                                            <div class="choosen-card__row choosen-card__row--header">
+                                                <div class="choosen-card__col">Номер карты</div>
+                                                <div class="choosen-card__col">Статус</div>
+                                            </div>
+                                            <div class="choosen-card__row">
+                                                <div class="choosen-card__col">
+                                                    <label class="control control-radio">
+                                                        <div class="choosen-card__num">
+                                                            <img src="img/visa-card.svg" alt="">
+                                                            <span>52 **** 4455</span>
+                                                        </div>
+                                                        <input type="radio" name="radio" value="card1"
+                                                            checked="checked" />
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                </div>
+                                                <div class="choosen-card__col choosen-card__col--status">
+                                                    <span class="choosen-card__status active">
+                                                        Активна
+                                                    </span>
+                                                    <button class="btn-reset delete-card__btn">
+                                                        <svg class="">
+                                                            <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="choosen-card__row">
+                                                <div class="choosen-card__col">
+                                                    <label class="control control-radio">
+                                                        <div class="choosen-card__num">
+                                                            <img src="img/visa-card.svg" alt="">
+                                                            <span>52 **** 4455</span>
+                                                        </div>
+                                                        <input type="radio" name="radio" value="card2"
+                                                            checked="checked" />
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                </div>
+                                                <div class="choosen-card__col choosen-card__col--status">
+                                                    <span class="choosen-card__status active">
+                                                        Активна
+                                                    </span>
+                                                    <button class="btn-reset delete-card__btn">
+                                                        <svg class="">
+                                                            <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div class="choosen-card__row">
+                                                <div class="choosen-card__col">
+                                                    <label class="control control-radio">
+                                                        <div class="choosen-card__num">
+                                                            <img src="img/mastercard.svg" alt="">
+                                                            <span>52 **** 4455</span>
+                                                        </div>
+                                                        <input type="radio" name="radio" value="card3"
+                                                            checked="checked" />
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                </div>
+                                                <div class="choosen-card__col choosen-card__col--status">
+                                                    <span class="choosen-card__status unactive">
+                                                        Неактивна
+                                                    </span>
+                                                    <button class="btn-reset delete-card__btn ">
+                                                        <svg class="">
+                                                            <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="choosen-card__new">
+                                            <h3 class="reg__form-title">Новая карта</h3>
+                                            <div class="reg__input">
+                                                <label class="form__title" for="num-card">
+                                                    Номер карты
+                                                </label>
+                                                <input type="tel" name="num-card" placeholder="Введите номер карты"
+                                                    required>
+                                            </div>
+                                            <div class="reg__input--row">
+                                                <div class="reg__input">
+                                                    <label class="form__title" for="card-date">
+                                                        Срок действия
+                                                    </label>
+                                                    <input type="date" name="card-date"
+                                                        placeholder="Введите номер карты" required>
+                                                </div>
+                                                <div class="reg__input">
+                                                    <label class="form__title" for="CVV">
+                                                        CVV*
+                                                    </label>
+                                                    <input type="password" name="CVV" placeholder="***" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button id="addCard" class="choosen-card__btn btn btn-transparent">Добавить
+                                            карту</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="reg__form-btns">
+                        <button class="reg__form-btn btn">Продолжить</button>
+                        <a class="reg__form-back" href="#">Вернуться назад</a>
+                    </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

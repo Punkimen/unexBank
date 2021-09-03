@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Данные про доходы и платежи</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="cabinet-new__form">
+                                <div class="cabinet-new__inner">
+                                    <div class="cabinet-new__left">
+                                        <div class="cabinet-new__input">
+                                            <label class="cabinet-new__label" for="lastCredit">Последний кредит*</label>
+                                            <input type="name" name="lastCredit">
+                                        </div>
+                                        <div class="cabinet-new__input">
+                                            <div class="select">
+                                                <label class="cabinet-new__label" for="mounthPay">Планируемый
+                                                    ежемесячный
+                                                    платеж*</label>
+                                                <select name="mounthPay">
+                                                    <option value="" hidden disabled selected>Выберите
+                                                    </option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                </select>
+                                                <div class="select_arrow">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-new__input">
+                                            <div class="select">
+                                                <label class="cabinet-new__label" for="mounthSumm">Сумма основного
+                                                    дохода*</label>
+                                                <select name="mounthSumm">
+                                                    <option value="" hidden disabled selected>Выберите
+                                                    </option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                </select>
+                                                <div class="select_arrow">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-new__right">
+                                        <div class="cabinet-new__input">
+                                            <div class="select">
+                                                <label class="cabinet-new__label" for="Payout">Частота выплаты
+                                                    дохода*</label>
+                                                <select name="Payout">
+                                                    <option value="" hidden disabled selected>Выберите
+                                                    </option>
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                </select>
+                                                <div class="select_arrow">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cabinet-new__date">
+                                            <div class="cabinet-new__dateLabel">Дата следующей оплаты</div>
+                                            <div class="personal__date-inp date-input">
+                                                <div class="select  ">
+                                                    <label class="cabinet-new__label" for="date-day">Дата</label>
+                                                    <select name="date-day">
+                                                        <option class="date-day-option" value="1">1</option>
+                                                        <option class="date-day-option" value="2">2</option>
+                                                        <option class="date-day-option" value="3">3</option>
+                                                        <option class="date-day-option" value="4">4</option>
+                                                        <option class="date-day-option" value="5">5</option>
+                                                        <option class="date-day-option" value="6">6</option>
+                                                        <option class="date-day-option" value="7">7</option>
+                                                        <option class="date-day-option" value="8">8</option>
+                                                        <option class="date-day-option" value="9">9</option>
+                                                        <option class="date-day-option" value="10">10</option>
+                                                        <option class="date-day-option" value="11">11</option>
+                                                        <option class="date-day-option" value="12">12</option>
+                                                        <option class="date-day-option" value="13">13</option>
+                                                        <option class="date-day-option" value="14">14</option>
+                                                        <option class="date-day-option" value="15">15</option>
+                                                        <option class="date-day-option" value="16">16</option>
+                                                        <option class="date-day-option" value="17">17</option>
+                                                        <option class="date-day-option" value="18">18</option>
+                                                        <option class="date-day-option" value="19">19</option>
+                                                        <option class="date-day-option" value="20">20</option>
+                                                        <option class="date-day-option" value="21">21</option>
+                                                        <option class="date-day-option" value="22">22</option>
+                                                        <option class="date-day-option" value="23">23</option>
+                                                        <option class="date-day-option" value="24">24</option>
+                                                        <option class="date-day-option" value="25">25</option>
+                                                        <option class="date-day-option" value="26">26</option>
+                                                        <option class="date-day-option" value="27">27</option>
+                                                        <option class="date-day-option" value="28">28</option>
+                                                        <option class="date-day-option" value="29">29</option>
+                                                        <option class="date-day-option" value="30">30</option>
+                                                        <option class="date-day-option" value="31">31</option>
+                                                    </select>
+                                                    <div class="select_arrow"></div>
+                                                </div>
+                                                <div class="select  ">
+                                                    <label class="cabinet-new__label" for="date-month">Месяц</label>
+                                                    <select name="date-month">
+                                                        <option class="date-month-option" value="1">Январь</option>
+                                                        <option class="date-month-option" value="2">Февраль</option>
+                                                        <option class="date-month-option" value="3">Март</option>
+                                                        <option class="date-month-option" value="4">Апрель</option>
+                                                        <option class="date-month-option" value="5">Май</option>
+                                                        <option class="date-month-option" value="6">Июнь</option>
+                                                        <option class="date-month-option" value="7">Июль</option>
+                                                        <option class="date-month-option" value="8">Август</option>
+                                                        <option class="date-month-option" value="9">Сентябрь</option>
+                                                        <option class="date-month-option" value="10">Октябрь</option>
+                                                        <option class="date-month-option" value="11">Ноябрь</option>
+                                                        <option class="date-month-option" value="12">Декабрь</option>
+                                                    </select>
+                                                    <div class="select_arrow">
+                                                    </div>
+
+                                                </div>
+                                                <div class="select  ">
+                                                    <label class="cabinet-new__label" for="date-year">Год</label>
+                                                    <select name="date-year">
+                                                        <option class="date-year-option" value="2020">2020</option>
+                                                        <option class="date-year-option" value="2019">2019</option>
+                                                    </select>
+                                                    <div class="select_arrow">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet-new__btns">
+                                    <button class="cabinet-new__btn btn" type="submit">Сохранить</button>
+                                    <button class="cabinet-new__btn btn-str" type="button">Отменить изменения</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

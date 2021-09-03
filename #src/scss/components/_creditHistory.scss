@@ -1,0 +1,126 @@
+.personal-cabinet {
+    background: #fff;
+}
+
+.credit-table {
+    font-size: 16px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+
+    &__header {
+        font-size: 15px;
+
+        @media(max-width: $md4 + px) {
+            display: none;
+        }
+    }
+
+    &__col {
+        position: relative;
+        padding: 14px;
+        border: 1px solid #EAECF0;
+
+        @media(max-width: $md4 + px) {
+            // display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+
+            &::before {
+                content: attr(data-label);
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+        }
+
+        @media(max-width: $md5 + px) {
+            font-size: 12px;
+        }
+
+        &--creditNum {
+            cursor: pointer;
+
+            &.active {
+                .credit_arrow {
+                    transform: translateY(-50%) rotate(-135deg);
+                }
+            }
+        }
+    }
+
+    &__row {
+        @media(max-width: $md4 + px) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            background: #e6e6e6;
+        }
+    }
+
+    &__info {
+        padding-bottom: 30px;
+    }
+}
+
+.credit-status {
+    color: #219653;
+}
+
+.credit-info {
+    display: none;
+    font-size: 16px;
+    width: 100%;
+    border-collapse: collapse;
+
+    @media(max-width: $md5 + px) {
+        font-size: 12px;
+    }
+
+    &__value {
+        white-space: nowrap;
+        margin-left: 7px;
+    }
+
+    &__row {
+        border: 1px solid #EAECF0;
+    }
+
+    &__row--head {
+        font-weight: bold;
+        background: #F4F4F9;
+    }
+
+    &__col {
+        padding: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__row--footer {
+        background: linear-gradient(102.95deg, #2D4251 22.8%, #4E718A 84.04%);
+        color: #fff;
+        font-weight: bold;
+    }
+
+    &__btns {
+        display: flex;
+        margin-top: 40px;
+
+        td {
+            padding: 0;
+        }
+    }
+
+    &__btn {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        max-width: 187px;
+
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+}

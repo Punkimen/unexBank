@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Данные про доходы и платежи</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="cabinet-new__date cabinet-date">
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label cabinet-date__label--w50">Получал кредит на
+                                        протяжении последних 5 лет:</div>
+                                    <div class="cabinet-date__value">Нет</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label cabinet-date__label--w50">Ежемесячный платеж за
+                                        текущими кредитами:</div>
+                                    <div class="cabinet-date__value">15 000</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label cabinet-date__label--w50">Сумма основного дохода:
+                                    </div>
+                                    <div class="cabinet-date__value">200 000</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label cabinet-date__label--w50">Частота оплаты дохода:
+                                    </div>
+                                    <div class="cabinet-date__value">1 раз в месяц</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label cabinet-date__label--w50">Дата следующей оплаты
+                                        дохода:</div>
+                                    <div class="cabinet-date__value">05.12.2019</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

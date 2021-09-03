@@ -1,0 +1,114 @@
+.step {
+    padding: 50px 0;
+
+    &__inner {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+
+    }
+
+    &__inner-num {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 15px;
+    }
+
+    &__inner-title {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        line-height: 24px;
+        color: #505050;
+
+    }
+}
+
+.section-banner {
+    background: #E7EBED;
+
+    &__title {
+        text-align: center;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+    }
+}
+
+.step-progress {
+    display: flex;
+    align-items: flex-start;
+    max-width: 575px;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 25px;
+
+    &__item {
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        &:last-child {
+            width: auto;
+        }
+
+        &.current {
+            .step-progress__circle::before {
+                background: $colorOrange;
+            }
+
+            .step-progress__num {
+                color: $colorOrange;
+            }
+        }
+
+        &.done {
+            .step-progress__line {
+                background: $colorOrange;
+            }
+        }
+    }
+
+    &__circle {
+        flex: 0 0 16px;
+        position: relative;
+        width: 16px;
+        height: 16px;
+        background: #fff;
+        box-shadow: 0px 2px 5px rgba(179, 179, 179, 0.31);
+        border-radius: 50%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 5px;
+            height: 5px;
+            background: #BDBDBD;
+            border-radius: 50%;
+        }
+    }
+
+    &__num {
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+        text-align: left;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    &__line {
+        height: 4px;
+        width: 100%;
+        background: #FFFFFF;
+        opacity: 0.7;
+        border-radius: 50px;
+    }
+}
+
+.current {}

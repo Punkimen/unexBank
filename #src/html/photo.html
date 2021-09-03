@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Верификация
+                </div>
+            </div>
+
+            <section class="verification">
+                <div class="container verification-container">
+                    <div class="verification__title">Фото с документом</div>
+                    <div class="photo__wrapper">
+                        <div class="photo__wrapper-left">
+                            <div class="photo__wrapper-img">
+                                <img src="img/photo.png" alt="">
+                            </div>
+                        </div>
+                        <div class="photo__wrapper-right">
+                            <ul>
+                                <li class="photo__wrapper-list">Возьмите в руки документ</li>
+                                <li class="photo__wrapper-list">Поднесите открытый документ ближе к лицу</li>
+                                <li class="photo__wrapper-list">Наведите камеру перед собой, так чтобы было видно и вас
+                                    и
+                                    документ
+                                </li>
+                                <li class="photo__wrapper-list">Сфотографируйтесь</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="verification__btns">
+                        <button class="verification__btn btn btn-transparent">
+                            <svg class="">
+                                <use xlink:href="./img/icons/icons.svg#bank"></use>
+                            </svg>
+                        </button>
+                        <button class="verification__btn btn">Продолжить</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+.cabinet-aside {
+    max-width: 265px;
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0px 8px 45px rgba(81, 45, 168, 0.03);
+    margin-right: 70px;
+
+    @media(max-width: $md3 + px) {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    &__header {
+        position: relative;
+        padding: 30px 35px;
+        background: linear-gradient(102.95deg, #E40300 22.8%, #B70208 84.04%);
+        color: #fff;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+
+    &__name {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 10px;
+
+        span {
+            display: block;
+        }
+    }
+
+    &__id {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    &__content {
+        background: #FFFFFF;
+        padding: 30px 35px;
+    }
+
+    &__nav {}
+
+    &__list {
+        @media(max-width: $md3 + px) {
+            columns: 2;
+        }
+
+        @media (max-width: $md4 + px) {
+            columns: 1;
+        }
+    }
+
+    &__item {
+        font-size: 16px;
+        line-height: 20px;
+        position: relative;
+        transition: all .2s;
+
+        &:hover {
+            color: $colorOrange;
+        }
+
+        &.active {
+            color: $colorOrange;
+
+            .cabinet-aside__arrow {
+                display: flex;
+            }
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+        @media(max-width: $md5 + px) {
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+
+    &__arrow {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: -35px;
+        background: $colorOrange;
+        width: 20px;
+        height: 20px;
+        border-radius: 0px 5px 5px 0px;
+
+        svg {
+            transform: rotate(180deg);
+            fill: #fff;
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    &__link {}
+}

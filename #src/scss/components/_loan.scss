@@ -1,0 +1,168 @@
+.registration__phone {
+    padding: 50px 0 150px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+}
+
+.registration__phone-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.registration__phone-info {
+    max-width: 555px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom: 45px;
+}
+
+.registration__phone-text {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 20px;
+
+    @media(max-width: $md5 + px) {
+        font-size: 14px;
+    }
+}
+
+.registration__phone-inp label,
+.registration__phone-code label {
+    font-size: 12px;
+    line-height: 13px;
+}
+
+.registration__phone-inp span,
+.registration__phone-code span {
+    opacity: .5;
+}
+
+.registration__phone-inp input,
+.registration__phone-code input {
+    display: block;
+    width: 100%;
+    border: 1px solid #EAECF0;
+    border-radius: 5px;
+    padding: 9px 15px;
+    color: #000;
+    outline: none;
+    margin: 15px 0 40px;
+}
+
+.registration__phone-code input {
+    margin-bottom: 20px;
+}
+
+.registration__phone-inp input:focus,
+.registration__phone-code input:focus {
+    border: 1px solid #000;
+}
+
+.registration__phone-code {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.registration__phone-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.registration__phone-answer {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+.registration__phone-repay {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #DCBA97;
+    border-bottom: 1px dotted #DCBA97;
+}
+
+.registration__phone-timer {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 40;
+    color: #E19A9D;
+    position: absolute;
+    right: 10px;
+    top: 43px;
+    z-index: 5;
+}
+
+.get__code {
+    max-width: 386px;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+
+    @media(max-width: $md5 + px) {
+        margin-bottom: 15px;
+    }
+}
+
+.register-btn {
+    display: inline-block;
+}
+
+.registration__phone-btns {
+    display: flex;
+    align-items: center;
+
+    @media(max-width: $md5 + px) {
+        display: block;
+    }
+}
+
+.register__enter {
+    margin-left: 35px;
+    color: #A4A4A4;
+    font-size: 14px;
+    line-height: 16px;
+    border-bottom: 1px dotted #A4A4A4;
+    transition: all .2s;
+
+    @media(max-width: $md5 + px) {
+        margin-left: 0;
+    }
+
+    &:hover {
+        color: $colorOrange;
+        border-color: $colorOrange;
+    }
+}
+
+.registration__phone-help {
+    max-width: 457px;
+    padding: 45px 50px;
+    box-shadow: 0px 8px 45px rgba(37, 37, 37, 0.03);
+    border-radius: 10px;
+    color: #333333;
+}
+
+.registration__phone-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+
+.registration-help__text {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+.registration-help__man {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,67 @@
+.cabinet-new {
+
+    &__table {}
+}
+
+.transiction-table {
+    font-size: 14px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+
+    &__header {
+        @media(max-width: $md4 + px) {
+            display: none;
+        }
+    }
+
+    &__row {
+        @media(max-width: $md4 + px) {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10px;
+            background: #e6e6e6;
+        }
+    }
+
+    &__col {
+        padding: 14px;
+        border: 1px solid #EAECF0;
+
+        @media(max-width: $md4 + px) {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media(max-width: $md5 + px) {
+                font-size: 12px;
+            }
+
+            &::after {
+                content: attr(data-label);
+
+                @media(max-width: $md5 + px) {
+                    font-size: 12px;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        svg {
+            margin-right: 10px;
+            width: 16px;
+            height: 16px;
+        }
+
+        span {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__body {}
+}
+
+.status-transiction {}
+
+.status-transiction--rejected {}

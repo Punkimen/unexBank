@@ -1,0 +1,128 @@
+.why {
+    padding-bottom: 120px;
+
+    @media(max-width: $md4 + px) {
+        padding-bottom: 100px;
+    }
+
+    @media(max-width: $md5 + px) {
+        padding-bottom: 80px;
+    }
+
+    &__title {}
+
+    &__subtitle-text {
+        margin-bottom: 50px;
+    }
+
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 30px;
+    }
+
+    &__item {
+        padding: 70px 50px 35px 75px;
+        font-family: 'Roboto', sans-serif;
+        color: #fff;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+        @media(max-width: $md3 + px) {
+            grid-column: 1/3;
+            padding: 80px 30px;
+        }
+
+        @media(max-width: $md5 + px) {
+            grid-column: 1/3;
+            padding: 60px 5px 30px 20px;
+        }
+    }
+
+    &__item--first {
+        background-image: url(../img/why__bg-1.jpg);
+
+        .why__item-text {
+            max-width: 423px;
+            width: 100%;
+
+            @media(max-width: $md3 + px) {
+                max-width: 512px;
+            }
+        }
+    }
+
+    &__item-num {
+        font-weight: 500;
+        font-size: 52px;
+        line-height: 100%;
+        margin-bottom: 15px;
+
+        @media(max-width: $md5 + px) {
+            font-size: 30px;
+        }
+
+        span {
+            -webkit-text-fill-color: rgba($color: #fff, $alpha: .2);
+            -webkit-text-stroke: 1px #fff;
+        }
+    }
+
+    &__item-title {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 100%;
+        margin-bottom: 60px;
+
+        @media(max-width: $md5 + px) {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+    }
+
+    &__item-text {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 120%;
+
+        @media(max-width: $md5 + px) {
+            font-size: 14px;
+        }
+    }
+
+    &__item--second {
+        background-image: url(../img/why__bg-2.jpg);
+
+        .why__item-text {
+            max-width: 342px;
+            width: 100%;
+
+            @media(max-width: $md3 + px) {
+                max-width: 470px;
+            }
+        }
+    }
+
+    &__item--third {
+        padding-left: 174px;
+        background-image: url(../img/why__bg-3.jpg);
+        grid-column: 1/3;
+
+        .why__item-text {
+            max-width: 574px;
+            width: 100%;
+
+            @media(max-width: $md3 + px) {
+                max-width: 489px;
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+
+}

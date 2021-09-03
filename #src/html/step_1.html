@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            @@include('components/_stepBanner.html')
+            <section class="reg">
+                <div class="container reg-container">
+                    <div class="reg__wrapper">
+                        <div class="reg__step-item active">
+                            <form class="step_1" id="step_1">
+                                <div class="reg__form mb-0">
+                                    <div class="reg__form-left mr-0">
+                                        <h3 class="reg__form-title">Финансовый номер</h3>
+                                        <div class="reg__input">
+                                            <label class="form__title" for="phone">
+                                                Мобильный номер
+                                            </label>
+                                            <input type="tel" name="phone" placeholder="+38 (0ХХ) ХХХ-ХХ-ХХ" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control control-group__item control-checkbox">
+                                        <div class="contol-group__text">Согласие на обработку персональных данных
+                                        </div>
+                                        <input type="checkbox" required />
+                                        <div class="control_indicator"></div>
+                                    </label>
+                                </div>
+                                <div class="reg__form-btns">
+                                    <button class="reg__form-btn btn">Продолжить</button>
+                                    <a class="reg__form-back" href="#">Вернуться назад</a>
+                                </div>
+                            </form>
+                        </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

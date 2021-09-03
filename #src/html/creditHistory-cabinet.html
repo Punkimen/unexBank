@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Кредитная история</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="cabinet-new__form">
+                                <table class="cabinet-new__table credit-table">
+                                    <thead class="credit-table__header">
+                                        <tr class="credit-table__row">
+                                            <td class="credit-table__col">
+                                                <span>Номер договора</span>
+                                            </td>
+                                            <td class="credit-table__col">
+                                                <span>Сумма</span>
+                                            </td>
+                                            <td class="credit-table__col">
+                                                <span>Дата</span>
+                                            </td>
+                                            <td class="credit-table__col">
+                                                <span>Статус</span>
+                                            </td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="credit-table__body">
+                                        <tr class="credit-table__row" data-num="1">
+                                            <td class="credit-table__col credit-table__col--creditNum"
+                                                data-label="Номер договора">
+                                                <span>КК - 12357800</span>
+                                                <div class="credit_arrow">
+                                                </div>
+                                            </td>
+                                            <td class="credit-table__col" data-label="Сумма">
+                                                <span>20 000 грн</span>
+                                            </td>
+                                            <td class="credit-table__col" data-label="Дата">
+                                                <span>12.08.2019</span>
+                                            </td>
+                                            <td class="credit-table__col" data-label="Статус">
+                                                <span class="credit-status">Кредит одобрен</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="credit-info" data-num="1">
+                                            <td colspan="4">
+                                                <div class="credit-table__info">
+                                                    <div class="credit-info__row credit-info__row--head">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Условия согласно договора
+                                                            </div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Размер процентной ставки
+                                                            </div>
+                                                            <div class="credit-info__value">2,00 %</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Срок кредитования</div>
+                                                            <div class="credit-info__value">16 дней</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Дата погашения по кредиту
+                                                            </div>
+                                                            <div class="credit-info__value">12.08.2019</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row credit-info__row--head">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Погашение клиентом на
+                                                                текущую
+                                                                дату
+                                                            </div>
+                                                            <div class="credit-info__value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Суммы кредита</div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Суммы процентов</div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Сумма штрафа</div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row credit-info__row--head">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Плановая сумма до погашения
+                                                            </div>
+                                                            <div class="credit-info__value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Остаток суммы кредита</div>
+                                                            <div class="credit-info__value">8 000 грн</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Суммы процентов</div>
+                                                            <div class="credit-info__value">200 грн</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Сумма штрафа</div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row credit-info__row--footer">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Сумма задолжености до
+                                                                полного
+                                                                погашения</div>
+                                                            <div class="credit-info__value">8 200 грн</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__btns">
+                                                        <button class="credit-info__btn btn" type="submit">
+                                                            Сохранить
+                                                        </button>
+                                                        <button class="credit-info__btn btn btn-transparent"
+                                                            type="button">
+                                                            Пролонгировать
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr class="credit-table__row" data-num="2">
+                                            <td class="credit-table__col credit-table__col--creditNum"
+                                                data-label="Номер договора">
+                                                <span>КК - 12357800</span>
+                                                <div class="credit_arrow">
+                                                </div>
+                                            </td>
+                                            <td class="credit-table__col" data-label="Сумма">
+                                                <span>20 000 грн</span>
+                                            </td>
+                                            <td class="credit-table__col" data-label="Дата">
+                                                <span>12.08.2019</span>
+                                            </td>
+                                            <td class="credit-table__col" data-label="Статус">
+                                                <span class="credit-status">Кредит одобрен</span>
+                                            </td>
+                                        </tr>
+                                        <tr class="credit-info" data-num="2">
+                                            <td colspan="4">
+                                                <div class="credit-table__info">
+                                                    <div class="credit-info__row credit-info__row--head">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Условия согласно договора
+                                                            </div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Размер процентной ставки
+                                                            </div>
+                                                            <div class="credit-info__value">2,00 %</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Срок кредитования</div>
+                                                            <div class="credit-info__value">16 дней</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Дата погашения по кредиту
+                                                            </div>
+                                                            <div class="credit-info__value">12.08.2019</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row credit-info__row--head">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Погашение клиентом на
+                                                                текущую
+                                                                дату
+                                                            </div>
+                                                            <div class="credit-info__value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Суммы кредита</div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Суммы процентов</div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Сумма штрафа</div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row credit-info__row--head">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Плановая сумма до погашения
+                                                            </div>
+                                                            <div class="credit-info__value"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Остаток суммы кредита</div>
+                                                            <div class="credit-info__value">8 000 грн</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Суммы процентов</div>
+                                                            <div class="credit-info__value">200 грн</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Сумма штрафа</div>
+                                                            <div class="credit-info__value">0,00</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__row credit-info__row--footer">
+                                                        <div class="credit-info__col">
+                                                            <div class="credit-info__label">Сумма задолжености до
+                                                                полного
+                                                                погашения</div>
+                                                            <div class="credit-info__value">8 200 грн</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="credit-info__btns">
+                                                        <button class="credit-info__btn btn" type="submit">
+                                                            Сохранить
+                                                        </button>
+                                                        <button class="credit-info__btn btn btn-transparent"
+                                                            type="button">
+                                                            Пролонгировать
+                                                        </button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Личные данные</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="cabinet-new__date cabinet-date">
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Дата рождения:</div>
+                                    <div class="cabinet-date__value">28.02.1984</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Пол:</div>
+                                    <div class="cabinet-date__value">Мужской</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Мобильный телефон:</div>
+                                    <div class="cabinet-date__value">+38 (066) 125-48-45</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Семейное положение:</div>
+                                    <div class="cabinet-date__value">Женат</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Образование:</div>
+                                    <div class="cabinet-date__value">Высшее</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Количество детей:</div>
+                                    <div class="cabinet-date__value">2</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Паспортные данные</span>
+                                <svg class="">
+                                    <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                </svg>
+                            </div>
+                            <div class="cabinet-new__date cabinet-date">
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Серия, номер паспорта:</div>
+                                    <div class="cabinet-date__value">НТ 142675</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Кем выдан:</div>
+                                    <div class="cabinet-date__value">Голосеевским РУ ГУ МВД Украины в городе Киеве</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Номер ИИН:</div>
+                                    <div class="cabinet-date__value">46977851897</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Дата выдачи паспорта:</div>
+                                    <div class="cabinet-date__value">12.05.2001</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Данные ID-карты</span>
+                                <svg class="">
+                                    <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                </svg>
+                            </div>
+                            <div class="cabinet-new__date cabinet-date">
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Номер записи ID:</div>
+                                    <div class="cabinet-date__value">19840216-00486</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Номер ID:</div>
+                                    <div class="cabinet-date__value">46977851897</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Действителен до:</div>
+                                    <div class="cabinet-date__value">12.05.2029</div>
+                                </div>
+                                <div class="cabinet-date__item">
+                                    <div class="cabinet-date__label">Кем выдан:</div>
+                                    <div class="cabinet-date__value">4564</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

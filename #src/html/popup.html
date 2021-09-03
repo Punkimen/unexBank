@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <a class="popup-modal" href="#popup__sent">1</a>
+    <a class="popup-modal" href="#popup__mistake">2</a>
+    <a class="popup-modal" href="#popup__congr-1">3</a>
+    <a class="popup-modal" href="#popup__congr-2">4</a>
+    <a class="popup-modal" href="#popup__sorry">5</a>
+    <a class="popup-modal" href="#popup__login">6</a>
+    <a class="popup-modal" href="#popup__promo">7</a>
+    <a class="popup-modal" href="#popup__promoErr">8</a>
+    <a class="popup-modal" href="#popup__verification-timer">9</a>
+    <a class="popup-modal" href="#popup__verification">10</a>
+    <div class="popups">
+        <div id="popup__sent" class="popup__sent popup">
+            <div class="popup__title">Ваша заявка отправлена</div>
+            <div class="sent__text popup__text">Ваша заявка отправлена на проверку! Вы получите сообщение, как
+                только
+                заявка будет
+                рассмотрена!</div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__mistake" class="popup__mistake popup">
+            <div class="popup__title">Ошибка отправки</div>
+            <div class="sent__text popup__text">При отправке заявки возникли проблемы, пожалуйста, попробуйте
+                еще
+                раз!
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__congr-1" class="popup__congr popup">
+            <div class="popup__title">Поздравляем!</div>
+            <div class="sent__text popup__text">Ваш кредит одобрен! Все данные по кредиту вы можете посмотреть в
+                личном
+                кабинете!
+            </div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                Перейти в кабинет
+            </a>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__congr-2" class="popup__congr popup">
+            <div class="popup__title">Поздравляем!</div>
+            <div class="sent__text popup__text">Ваш кредит одобрен!
+            </div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                Получить деньги
+            </a>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__sorry" class="popup__sorry popup">
+            <div class="popup__title">Сожалеем!</div>
+            <div class="sent__text popup__text">Ваш кредит не был одобрен. Вы можете подать повторную заявку
+                через
+                30
+                дней</div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                На главную
+            </a>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__login" class="popup__login popup">
+            <div class="login__inner">
+                <div class="form__label popup__title">Войти в кабинет</div>
+                <form class="login__form">
+                    <div class="login__form-item">
+                        <label>Номер телефона*</label>
+                        <input type="phone">
+                    </div>
+                    <div class="login__form-item">
+                        <label>Пароль*</label>
+                        <input>
+                    </div>
+                    <a href="#" class="login__forgot">Забыли пароль?</a>
+                    <a href="#" class="popup-btn btn">Войти</a>
+                    <div class="login__register">
+                        <a href="#" class="login__regist">Регистрация</a>
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__promo" class="popup popup__promo">
+            <div class="popup__title">Введите промо-код</div>
+            <div class="login__form-item">
+                <form class="login__form">
+                    <input>
+                    <button href="#" class="popup-btn btn">Подтвердить</button>
+                </form>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+
+        <div id="popup__promoErr" class="popup popup__promo">
+            <div class="popup__title">Введите промо-код</div>
+            <div class="popup__error-text">
+                Неверный промо-код
+            </div>
+            <div class="login__form-item">
+                <form class="login__form">
+                    <input>
+                    <button href="#" class="popup-btn btn">Подтвердить</button>
+                </form>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__verification-timer" class="popup popup__verification">
+            <div class="popup__title">Проходит идентификация личности</div>
+            <div class="popup__text">Подождите, пожалуйста, процесс проверки займет не больше 5 минут</div>
+            <div class="timer"></div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__verification" class="popup popup__verification">
+            <div class="popup__title">Ваш аккаунт проверяется</div>
+            <div class="popup__text">Мы успешно получили данные, которые вы отправили для верификации своего
+                аккаунта.
+                Ваш аккаунт на этапе проверки. Как только ваш аккаунт будет верифицирован, вы
+                получитеуведомление.
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

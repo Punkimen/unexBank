@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        <header class="header">
+    <div class="container header-container">
+        <div class="header__burger">
+            <div class="burger__icon icon-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="header__logo">
+            <a href="">
+                <img src="img/logo.svg" alt="">
+            </a>
+        </div>
+        <div class="header__end">
+            <a href="tel:0800500686" class="header__phone">0 800 500 686</a>
+            <div class="header__languages">
+                <a href="#" class="header__lang">ua</a>
+                <a href="#" class="header__lang active">ru</a>
+            </div>
+            <div class="header__btns">
+                <button class="header__btns-btn btn">Погасить</button>
+                <a href="#" class="header__btns-btn header__btns-btn--cabinet btn btn-transparent">
+                    <span class="header__cabinet-descr">Личный кабинет</span>
+                </a>
+            </div>
+            <a class="header__personal-cabinet" href="">
+                <svg class="svg-cabinet">
+                    <use xlink:href="./img/icons/icons.svg#cabinet"></use>
+                </svg>
+            </a>
+        </div>
+
+        <div class="header__mobile">
+            <div class="header__mobile-container">
+                <div class="header__mobile-languages">
+                    <div class="header__mobile-lang active">ua</div>
+                    <div class="header__mobile-lang">ru</div>
+                </div>
+                <nav class="header__mobile-nav">
+                    <ul class="header__mobile-list">
+                        <li class="header__mobile-elem">
+                            <a href="#" class="header-link">Вопросы и ответы</a>
+                        </li>
+                        <li class="header__mobile-elem">
+                            <a href="#" class="header-link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__mobile-phones">
+                    <div class="header__mobile-phone">
+                        <a href="tel:+380445851487">+38 (044) 585- 14-87</a>
+                        <span>(по тарифам оператора)</span>
+                    </div>
+                    <div class="header__mobile-phone">
+                        <a href="tel:0800500686">0 800 500 686</a>
+                        <span>(по тарифам оператора)</span>
+                    </div>
+                </div>
+                <div class="header__mobile-btns">
+                    <button class="header__mobile-btn btn btn-transparent">Личный кабинет</button>
+                    <button class="header__mobile-btn btn">Погасить</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    <aside class="cabinet-aside">
+    <div class="cabinet-aside__header">
+        <div class="cabinet-aside__icon">
+            <span>
+                <img src="img/hexagon-icon.svg" alt="">
+            </span>
+            <span>
+                <img src="img/hexagon-icon.svg" alt="">
+            </span>
+            <span>
+                <img src="img/hexagon-white.svg" alt="">
+            </span>
+        </div>
+        <div class="cabinet-aside__name">
+            <span>Павловленко</span> Николай Николаевич
+        </div>
+        <div class="cabinet-aside__id">id 12463</div>
+    </div>
+    <div class="cabinet-aside__content">
+        <nav class="cabinet-aside__nav">
+            <ul class="cabinet-aside__list">
+                <li class="cabinet-aside__item active">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Личные данные</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Доходы и платежи</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Адреса</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Платежные карты</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">История транзакций</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Кредитная история</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Документы</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Социальные сети</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Сменить пароль</a>
+                </li>
+                <li class="cabinet-aside__item">
+                    <div class="cabinet-aside__arrow">
+                        <svg class="">
+                            <use xlink:href="./img/icons/icons.svg#pag-arrow"></use>
+                        </svg>
+                    </div>
+                    <a href="#" class="cabinet-aside__link">Выйти</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="modal modal--error">
+        <div class="modal__title">
+            <img src="img/warning.png" alt="">
+            Ваш аккаунт не верифицирован
+        </div>
+        <a href="#" class="modal__link">Пройти верификацию</a>
+        <div class="modal-close">
+            <svg class="">
+                <use xlink:href="./img/icons/icons.svg#close"></use>
+            </svg>
+        </div>
+    </div>
+    <div class="modal modal--wait">
+        <div class="modal__title">
+            <img src="img/modal-wait.png" alt="">
+            Ваш аккаунт проходит верификацию
+        </div>
+        <div class="modal-close">
+            <svg class="">
+                <use xlink:href="./img/icons/icons.svg#close"></use>
+            </svg>
+        </div>
+    </div>
+    <div class="modal modal--sucsess">
+        <div class="modal__title">
+            <img src="img/modal-sucsess.png" alt="">
+            Ваш аккаунт успешно верифицирован!
+        </div>
+        <div class="modal__text">У вас есть возможность оформить новый кредит</div>
+        <div class="modal-close">
+            <svg class="">
+                <use xlink:href="./img/icons/icons.svg#close"></use>
+            </svg>
+        </div>
+    </div>
+</aside>
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Адрес места проживания</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="cabinet-new__form">
+                                <table class="cabinet-new__table cards-table">
+                                    <thead class="cards-table__header">
+                                        <tr class="cards-table__row">
+                                            <td colspan="3" class="cards-table__col">Номер карты</td>
+                                            <td colspan="3" class="cards-table__col">Статус</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="cards-table__body">
+                                        <tr class="cards-table__row">
+                                            <td colspan="3" class="cards-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#credit-card"></use>
+                                                    </svg>
+                                                    52 **** 4455
+                                                </span>
+                                            </td>
+                                            <td colspan="2" class="cards-table__col" data-label="Статус">
+                                                <span class="cards-table__status">Активирована</span>
+                                            </td>
+                                            <td class="cards-table__col cards-table__col--delete">
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="cards-table__row">
+                                            <td colspan="3" class="cards-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#credit-card"></use>
+                                                    </svg>
+                                                    52 **** 4455
+                                                </span>
+                                            </td>
+                                            <td colspan="2" class="cards-table__col" data-label="Статус">
+                                                <span class="cards-table__status">Активирована</span>
+                                            </td>
+                                            <td class="cards-table__col cards-table__col--delete">
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                        <tr class="cards-table__row">
+                                            <td colspan="3" class="cards-table__col" data-label="Номер карты">
+                                                <span>
+                                                    <svg class="">
+                                                        <use xlink:href="./img/icons/icons.svg#credit-card"></use>
+                                                    </svg>
+                                                    52 **** 4455
+                                                </span>
+                                            </td>
+                                            <td colspan="2" class="cards-table__col" data-label="Статус">
+                                                <span
+                                                    class="cards-table__status cards-table__status--unactive">Неактивна</span>
+                                            </td>
+                                            <td class="cards-table__col cards-table__col--delete">
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#trash"></use>
+                                                </svg>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <button class="add-card__btn btn btn-transparent" type="button">Добавить карту</button>
+                            </form>
+                        </div>
+                        <div class="cabinet-new__item cabinet-new__item--newCard">
+                            <div class="cabinet-new__title">
+                                <span>Новая карта</span>
+                                <button class="btn-edit" type="submit">
+                                    <svg class="">
+                                        <use xlink:href="./img/icons/icons.svg#edit"></use>
+                                    </svg>
+                                </button>
+                            </div>
+                            <form class="cabinet-new__form">
+                                <div class="cabinet-new__inner">
+                                    <div class="cabinet-new__left">
+                                        <div class="cabinet-new__input">
+                                            <label class="cabinet-new__label" for="cardNum">Номер карты*</label>
+                                            <input type="name" name="cardNum">
+                                        </div>
+                                    </div>
+                                    <div class="cabinet-new__right">
+                                        <div class="cabinet-new__inputs cabinet-new__inputs--equal">
+                                            <div class="cabinet-new__input">
+                                                <label class="cabinet-new__label" for="passportTerm">Срок
+                                                    действия*</label>
+                                                <input type="name" name="passportTerm" placeholder="11.12.___">
+                                            </div>
+                                            <div class="cabinet-new__input">
+                                                <label class="cabinet-new__label" for="CVV">CVV*</label>
+                                                <input type="name" name="CVV" placeholder="***">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cabinet-new__btns">
+                                    <button class="cabinet-new__btn btn" type="submit">Сохранить карту</button>
+                                    <button class="cabinet-new__btn btn-str" type="button">Отменить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__wrapper">
+            <div class="footer__left">
+                <ul class="footer__list">
+                    <li class="footer__list-elem">
+                        <a href="#" class="footer__link">
+                            Новости
+                        </a>
+                    </li>
+                    <li class="footer__list-elem">
+                        <a href="#" class="footer__link">
+                            Реквизиты
+                        </a>
+                    </li>
+                    <li class="footer__list-elem">
+                        <a href="#" class="footer__link">
+                            Фонд гарантирования вкладов физических лиц
+                        </a>
+                    </li>
+                    <li class="footer__list-elem">
+                        <a href="#" class="footer__link">
+                            Обратная связь
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__right">
+                <div class="footer-contacts">
+                    <div class="footer-contacts__title">Контакт центр:</div>
+                    <div class="footer-contacts__phone">
+                        <a href="tel:380445851487">
+                            +38 (044) 585- 14-87
+                        </a>
+                        <span class="footer-contacts__descrption">(по тарифам оператора)</span>
+                    </div>
+                    <div class="footer-contacts__phone">
+                        <a href="tel:0800500686">
+                            0 800 500 686
+                        </a>
+                        <span class="footer-contacts__descrption">(по тарифам оператора)</span>
+                    </div>
+                </div>
+                <div class="footer-socail">
+                    <div class="footer-socail__links">
+                        <div class="footer-socail__label">Мы в социальных сетях:</div>
+                        <div class="footer-social__icons">
+                            <a href="#">
+                                <svg class="">
+                                    <use xlink:href="./img/icons/icons.svg#instagram"></use>
+                                </svg>
+                            </a>
+                            <a href="#">
+                                <svg class="">
+                                    <use xlink:href="./img/icons/icons.svg#facebook"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer-socail__news footer-news">
+                        <div class="footer-news__label">Подписывайтесь на наши новости:</div>
+                        <div class="footer-news__search">
+                            <input class="footer__input-search" type="search">
+                            <button class="btn footer-news__search-btn">
+                                <svg class="">
+                                    <use xlink:href="./img/icons/icons.svg#handle-arrow"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer-docs">
+                <div class="footer-docs__list">
+                    <a href="#" class="footer-copy__item">© АТ“ЮНЕКС БАНК”. Участник ФГВФО</a>
+                    <a href="#" class="footer-copy__item">Лицензия НБУ 56 от 28.10.2011</a>
+                    <div class="footer-copy__item">© 2004- 2021, АТ“ЮНЕКС БАНК”</div>
+                </div>
+                <button type="button" class="footer-copy__chat btn-reset">
+                    <svg class="">
+                        <use xlink:href="./img/icons/icons.svg#chat"></use>
+                    </svg>
+                    <span>ОНЛАЙН ЧАТ</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+<script src="js/vendor.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js"
+    integrity="sha512-Yk47FuYNtuINE1w+t/KT4BQ7JaycTCcrvlSvdK/jry6Kcxqg5vN7/svVWCxZykVzzJHaxXk5T9jnFemZHSYgnw=="
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"
+    integrity="sha512-dQIiHSl2hr3NWKKLycPndtpbh5iaHLo6MwrXm7F0FM5e+kL2U16oE9uIwPHUl6fQBeCthiEuV/rzP3MiAB8Vfw=="
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+<script src="js/script.js" defer></script>
+</body>
+
+</html>

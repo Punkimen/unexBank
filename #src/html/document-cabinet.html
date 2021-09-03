@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <div class="section-banner">
+                <div class="container">
+                    Личный кабинет
+                </div>
+            </div>
+            <section class="personal-cabinet">
+                <div class="container container-cabinet">
+                    @@include('components/_cabinetAside.html')
+                    <div class="cabinet-new">
+                        <div class="cabinet-new__item">
+                            <div class="cabinet-new__title">
+                                <span>Документы</span>
+                            </div>
+                            <table class="cabinet-new__table document-table table">
+                                <thead class="document-table__header table__head">
+                                    <tr class="document-table__row table__row">
+                                        <td class="document-table__col table__col">Номер договора</td>
+                                        <td class="document-table__col table__col">Сумма</td>
+                                        <td class="document-table__col table__col">Дата</td>
+                                        <td class="document-table__col table__col"></td>
+                                    </tr>
+                                </thead>
+                                <tbody class="document-table__body table__body">
+                                    <tr class="document-table__row table__row">
+                                        <td class="document-table__col table__col" data-label="Номер договора">
+                                            <div>
+                                                <div>Кредитный договор</div>
+                                                № КК - 12357800
+                                            </div>
+                                        </td>
+                                        <td class="document-table__col table__col" data-label="Сумма">20 000 грн</td>
+                                        <td class="document-table__col table__col" data-label="Дата">12.08.2019</td>
+                                        <td class="document-table__col table__col document-table__col--no-flex">
+                                            <div class="document-table__doc"><a href="#">Кредитный договор</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="document-table__doc"><a href="#">Справка</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="document-table__doc"><a href="#">Договор страхования</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="document-table__row table__row">
+                                        <td class="document-table__col table__col" data-label="Номер договора">
+                                            <div>
+                                                <div>Кредитный договор</div>
+                                                № КК - 12357800
+                                            </div>
+                                        </td>
+                                        <td class="document-table__col table__col" data-label="Сумма">20 000 грн</td>
+                                        <td class="document-table__col table__col" data-label="Дата">12.08.2019</td>
+                                        <td class="document-table__col table__col document-table__col--no-flex">
+                                            <div class="document-table__doc"><a href="#">Кредитный договор</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="document-table__doc"><a href="#">Справка</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="document-table__doc"><a href="#">Договор страхования</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="document-table__row table__row">
+                                        <td class="document-table__col table__col" data-label="Номер договора">
+                                            <div>
+                                                <div>Кредитный договор</div>
+                                                № КК - 12357800
+                                            </div>
+                                        </td>
+                                        <td class="document-table__col table__col" data-label="Сумма">20 000 грн</td>
+                                        <td class="document-table__col table__col" data-label="Дата">12.08.2019</td>
+                                        <td class="document-table__col table__col document-table__col--no-flex">
+                                            <div class="document-table__doc"><a href="#">Кредитный договор</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="document-table__doc"><a href="#">Справка</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                            <div class="document-table__doc"><a href="#">Договор страхования</a>
+                                                <svg class="">
+                                                    <use xlink:href="./img/icons/icons.svg#download"></use>
+                                                </svg>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

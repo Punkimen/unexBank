@@ -1,0 +1,33 @@
+.social-cabinet {
+
+    &__description {
+        margin-bottom: 30px;
+
+        @media(max-width: $md5 + px) {
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+
+        .cabinet-new__input {
+            width: 100%;
+            margin-right: 15px;
+        }
+
+        svg {
+
+            transform: translateY(3px);
+            width: 16px;
+            height: 16px;
+            stroke: #d1d1d3;
+        }
+    }
+
+    &__btn {
+        max-width: 187px;
+    }
+}

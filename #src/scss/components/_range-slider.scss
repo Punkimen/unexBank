@@ -1,0 +1,62 @@
+// range-slider
+.irs--flat .irs-min,
+.irs--flat .irs-max {
+    display: none;
+}
+
+.irs--flat .irs-from,
+.irs--flat .irs-to,
+.irs--flat .irs-single {
+    display: none;
+}
+
+.irs--flat .irs-line {
+    height: 6px;
+    background: #F4F4F9;
+}
+
+.irs--flat .irs-handle {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    top: 20px;
+
+    &::before {
+        content: '';
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        background: $colorOrange;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+    }
+}
+
+.irs-handle {
+    &>i {
+        display: none !important;
+    }
+}
+
+.irs--flat .irs-bar {
+    height: 6px;
+    background: linear-gradient(102.95deg, #E40300 22.8%, #B70208 84.04%);
+}
+
+.calculation-item {
+
+    &__range-info {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        font-size: 10px;
+        line-height: 11px;
+        color: #505050;
+    }
+
+    &__range-min {}
+
+    &__range-max {}
+}

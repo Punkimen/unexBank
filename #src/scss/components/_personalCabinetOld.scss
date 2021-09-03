@@ -1,0 +1,49 @@
+.cabinet-new {
+
+    &__date {}
+}
+
+.cabinet-date {
+
+    &__item {
+        display: flex;
+        font-size: 16px;
+        line-height: 20px;
+
+        &:not(:last-child) {
+            margin-bottom: 10px;
+
+            @media(max-width: $md3 + px) {
+                margin-bottom: 16px;
+            }
+        }
+
+        @media(max-width: $md3 + px) {
+            display: block;
+        }
+
+        @media(max-width: $md6 + px) {
+            font-size: 12px;
+            line-height: 17px;
+        }
+    }
+
+    &__label {
+        display: inline-block;
+        min-width: 200px;
+        margin-right: 40px;
+        color: #A4A4A4;
+
+        &--w50 {
+            min-width: 380px;
+        }
+
+        @media(max-width: $md3 + px) {
+            min-width: auto;
+            margin-right: 0;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__value {}
+}

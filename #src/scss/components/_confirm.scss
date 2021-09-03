@@ -1,0 +1,33 @@
+.confirm {
+    padding: 50px 0 120px;
+}
+
+.confirm__content {
+    max-width: 750px;
+    margin: 0 auto;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.confirm__content-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #2f2f2f;
+    margin-bottom: 17px;
+}
+
+.confirm__content-subtitle {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 20px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.confirm__content-text {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/jquery.mcustomscrollbar/3.0.6/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="css/vendor.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <section class="section-error">
+                <div class="container">
+                    <div class="error-img">
+                        <img src="img/error.png" alt="ОШИБКА">
+                    </div>
+                    <div class="error__content">
+                        <div class="error__content-title">Страница не найдена</div>
+                        <div class="error__content-text">Вы находитесь здесь, потому что ввели неверный адрес страницы,
+                            либо
+                            запрашеваемая страница была удалена</div>
+                        <div class="error__content-btn btn">
+                            <a href="main.html">Вернуться на главную</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>
