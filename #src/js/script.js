@@ -521,6 +521,21 @@ if (formSteps) {
 // steps2-5 end
 
 // registration end
+
+
+// photo do
+
+const tabs = $('.photo-do__tab')
+const tabsBody = $('.photo-do__tab-body')
+tabs.on('click', function () {
+    $(this).addClass('active').siblings().removeClass("active")
+    let index = $(this).index()
+    tabsBody.hide(100)
+    tabsBody.eq(index).show(110)
+})
+// photo do end
+
+
 // webcam
 
 const video = document.querySelector('#video');
@@ -528,17 +543,47 @@ const canvas = document.querySelector('#canvas');
 const context = canvas.getContext('2d');
 const photo = document.querySelector('.your-photo')
 const photoBtnSnap = document.querySelector("#snap")
+const openPhotoBtn = document.querySelectorAll('.photo-do__btn')
+const photoPopup = document.querySelector('.photo-popup')
+const savePhotoBtn = document.querySelector('#save-snap')
+const photoOne = document.querySelector('.photo-1')
+const photoTwo = document.querySelector('.photo-2')
+const photoThree = document.querySelector('.photo-3')
+const photoFour = document.querySelector('.photo-4')
+const photoFive = document.querySelector('.photo-5')
+const NewPhotoBtn = document.querySelectorAll('.photo-newDo__btn')
+
 
 // Получаем доступ к камере
-if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-    // Не включаем аудио опцией `{ audio: true }` поскольку сейчас мы работаем только с изображениями
-    navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
-        video.srcObject = stream;
-        video.play();
-    });
-}
-
-
+openPhotoBtn.forEach(el => {
+    el.addEventListener('click', function () {
+        photoPopup.classList.add('show')
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true }).then(function (stream) {
+                video.srcObject = stream;
+                video.play();
+            });
+        } else {
+            console.log('Камера не подключена!');
+        }
+        console.log(el.getAttribute('data-photo'))
+        if (el.getAttribute('data-photo') == 1) {
+            savePhotoBtn.setAttribute('data-photo', 1)
+        } else if (el.getAttribute('data-photo') == 2) {
+            savePhotoBtn.setAttribute('data-photo', 2)
+            console.log('w');
+        } else if (el.getAttribute('data-photo') == 3) {
+            savePhotoBtn.setAttribute('data-photo', 3)
+            console.log('w');
+        } else if (el.getAttribute('data-photo') == 4) {
+            savePhotoBtn.setAttribute('data-photo', 4)
+            console.log('w');
+        } else if (el.getAttribute('data-photo') == 5) {
+            savePhotoBtn.setAttribute('data-photo', 5)
+            console.log('w');
+        }
+    })
+})
 
 // Обработчик события нажатия на кнопку "Сделать снимок"
 photoBtnSnap.addEventListener("click", function () {
@@ -547,14 +592,53 @@ photoBtnSnap.addEventListener("click", function () {
         photo.setAttribute('src', canvas.toDataURL('image/png'));
         photoBtnSnap.setAttribute('data-photo', "new")
         photo.style.display = 'block'
+        savePhotoBtn.classList.add('show')
     } else {
         photoBtnSnap.setAttribute('data-photo', "do")
         photo.style.display = 'none'
+        savePhotoBtn.classList.remove('show')
     }
-
 });
 
-
+savePhotoBtn.addEventListener('click', function () {
+    if (savePhotoBtn.getAttribute('data-photo') == 1) {
+        photoOne.setAttribute('src', canvas.toDataURL('image/png'));
+        NewPhotoBtn.forEach(el => {
+            if (el.getAttribute('data-photo') == 1) {
+                el.style.display = 'block'
+            }
+        })
+    } else if (savePhotoBtn.getAttribute('data-photo') == 2) {
+        photoTwo.setAttribute('src', canvas.toDataURL('image/png'));
+        NewPhotoBtn.forEach(el => {
+            if (el.getAttribute('data-photo') == 2) {
+                el.style.display = 'block'
+            }
+        })
+    } else if (savePhotoBtn.getAttribute('data-photo') == 3) {
+        photoThree.setAttribute('src', canvas.toDataURL('image/png'));
+        NewPhotoBtn.forEach(el => {
+            if (el.getAttribute('data-photo') == 3) {
+                el.style.display = 'block'
+            }
+        })
+    } else if (savePhotoBtn.getAttribute('data-photo') == 4) {
+        photoFour.setAttribute('src', canvas.toDataURL('image/png'));
+        NewPhotoBtn.forEach(el => {
+            if (el.getAttribute('data-photo') == 4) {
+                el.style.display = 'block'
+            }
+        })
+    } else if (savePhotoBtn.getAttribute('data-photo') == 5) {
+        photoFive.setAttribute('src', canvas.toDataURL('image/png'));
+        NewPhotoBtn.forEach(el => {
+            if (el.getAttribute('data-photo') == 5) {
+                el.style.display = 'block'
+            }
+        })
+    }
+    photoPopup.classList.remove('show')
+})
 
 // let camera = document.querySelector('#my_camera')
 // if (camera) {

@@ -3760,12 +3760,8 @@ select:focus {
   border-radius: 5px;
 }
 
-.photo-do__item {
+.photo-do__tab-body.hide {
   display: none;
-}
-
-.photo-do__item.show {
-  display: block;
 }
 
 .photo-do__descrition {
@@ -3785,7 +3781,16 @@ select:focus {
   margin: 0 auto;
 }
 
+.photo-newDo__btn {
+  display: none;
+  color: #FF0000;
+  font-weight: 600;
+  margin: 0 auto 15px;
+  text-align: center;
+}
+
 .photo-popup {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -3795,6 +3800,10 @@ select:focus {
   height: 100%;
   z-index: 99;
   padding: 30px 15px;
+}
+
+.photo-popup.show {
+  display: block;
 }
 
 .photo-popup__inner {
@@ -3847,6 +3856,7 @@ select:focus {
 }
 
 .photo-popup__img {
+  height: 100%;
   position: relative;
   background: #E0E0E0;
   border-radius: 5px;
@@ -3854,6 +3864,12 @@ select:focus {
 }
 
 .photo-popup__img #video {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-popup__img #canvas {
   display: block;
   width: 100%;
   height: 100%;
@@ -3887,6 +3903,15 @@ select:focus {
   max-width: 386px;
   width: 100%;
   margin: 0 auto;
+}
+
+.save-photo {
+  margin-top: 15px;
+  display: none;
+}
+
+.save-photo.show {
+  display: block;
 }
 
 .verification-choosen {

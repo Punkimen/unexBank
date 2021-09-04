@@ -291,13 +291,13 @@
         border-radius: 5px;
     }
 
-    &__item {
-        display: none;
-
-        &.show {
-            display: block;
+    &__tab-body {
+        &.hide {
+            display: none;
         }
     }
+
+    &__item {}
 
     &__descrition {
         max-width: 335px;
@@ -317,7 +317,16 @@
     }
 }
 
+.photo-newDo__btn {
+    display: none;
+    color: $colorOrange;
+    font-weight: 600;
+    margin: 0 auto 15px;
+    text-align: center;
+}
+
 .photo-popup {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -327,6 +336,10 @@
     height: 100%;
     z-index: 99;
     padding: 30px 15px;
+
+    &.show {
+        display: block;
+    }
 
     &__inner {
         position: absolute;
@@ -379,12 +392,19 @@
     }
 
     &__img {
+        height: 100%;
         position: relative;
         background: #E0E0E0;
         border-radius: 5px;
         overflow: hidden;
 
         #video {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        #canvas {
             display: block;
             width: 100%;
             height: 100%;
@@ -419,6 +439,15 @@
         max-width: 386px;
         width: 100%;
         margin: 0 auto;
+    }
+}
+
+.save-photo {
+    margin-top: 15px;
+    display: none;
+
+    &.show {
+        display: block;
     }
 }
 

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @@include('components/_styles.html')
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <section class="step section-banner">
+                <div class="container">
+                    <div class="step__inner">
+                        <div class="section-banner__title">Верификация</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="verification">
+                <div class="container verification-container">
+                    <div class="verification__title">Паспорт старого образца</div>
+                    <div class="photo-do">
+                        <div class="photo-do__tabs">
+                            <button class="photo-do__tab btn-reset active">1 страница</button>
+                            <button class="photo-do__tab btn-reset">2-3</button>
+                            <button class="photo-do__tab btn-reset">4-5</button>
+                            <button class="photo-do__tab btn-reset">6-7</button>
+                            <button class="photo-do__tab btn-reset">Прописка</button>
+                        </div>
+                        <div class="photo-do__tab-body" data-tab="0">
+                            <div class="photo-do__body">
+                                <div class="photo-do__item show">
+                                    <img class="photo-1" src="img/photo-example.png" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-do__descrition">Убедитесь, что это оригинал- не фотографируйте копии или
+                                изображения с других устройств</div>
+                            <button class="btn-reset photo-newDo__btn photo-do__btn"
+                                data-photo="1">Перефотографировать</button>
+                            <button class="btn photo-do__btn" data-photo="1">Сделать фото</button>
+                        </div>
+                        <div class="photo-do__tab-body hide" data-tab="1">
+                            <div class="photo-do__body">
+                                <div class="photo-do__item ">
+                                    <img class="photo-2" src="img/photo-example.png" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-do__descrition">Убедитесь, что это оригинал- не фотографируйте копии или
+                                изображения с других устройств</div>
+                            <button class="btn-reset photo-newDo__btn photo-do__btn"
+                                data-photo="2">Перефотографировать</button>
+                            <button class="btn photo-do__btn" data-photo="2">Сделать фото</button>
+                        </div>
+                        <div class="photo-do__tab-body hide" data-tab="2">
+                            <div class="photo-do__body">
+                                <div class="photo-do__item ">
+                                    <img class="photo-3" src="img/photo-example.png" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-do__descrition">Убедитесь, что это оригинал- не фотографируйте копии или
+                                изображения с других устройств</div>
+                            <button class="btn-reset photo-newDo__btn photo-do__btn"
+                                data-photo="3">Перефотографировать</button>
+                            <button class="btn photo-do__btn" data-photo="3">Сделать фото</button>
+                        </div>
+                        <div class="photo-do__tab-body hide" data-tab="3">
+                            <div class="photo-do__body">
+                                <div class="photo-do__item ">
+                                    <img class="photo-4" src="img/photo-example.png" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-do__descrition">Убедитесь, что это оригинал- не фотографируйте копии или
+                                изображения с других устройств</div>
+                            <button class="btn-reset photo-newDo__btn photo-do__btn"
+                                data-photo="4">Перефотографировать</button>
+                            <button class="btn photo-do__btn" data-photo="4">Сделать фото</button>
+                        </div>
+                        <div class="photo-do__tab-body hide" data-tab="4">
+                            <div class="photo-do__body">
+                                <div class="photo-do__item ">
+                                    <img class="photo-5" src="img/photo-example.png" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-do__descrition">Убедитесь, что это оригинал- не фотографируйте копии или
+                                изображения с других устройств</div>
+                            <button class="btn-reset photo-newDo__btn photo-do__btn"
+                                data-photo="5">Перефотографировать</button>
+                            <button class="btn photo-do__btn" data-photo="5">Сделать фото</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="photo-popup">
+                <div class="photo-popup__inner">
+                    <div class="photo-popup__body">
+                        <div class="photo-popup__title">Фото ID- карта</div>
+                        <div class="photo-popup__subtitle">Лицевая сторона</div>
+                        <div class="photo-popup__img-body">
+                            <div class="photo-popup__img">
+                                <video id="video" width="430" height="263" autoplay></video>
+                                <img class="your-photo" src="#" alt="">
+                                <canvas id="canvas" width="430" height="263"></canvas>
+                            </div>
+                        </div>
+                        <div class="photo-popup__descr">Убедитесь, что паспорт хорошо осветлен</div>
+                        <button id="snap" data-photo="do" class="photo-popup__btn btn take-photo">Сделать
+                            фото</button>
+                        <button id="save-snap" data-photo="do" class="photo-popup__btn btn save-photo">Сохранить
+                            фото</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>
