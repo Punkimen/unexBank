@@ -3906,6 +3906,16 @@ select:focus {
   line-height: 20px;
 }
 
+.photo-popup__instruction {
+  position: relative;
+  text-align: center;
+}
+
+.photo-popup__instruction p {
+  position: relative;
+  bottom: 30px;
+}
+
 .photo-popup__img-body {
   border: 2px dashed #F2994A;
   padding: 15px;

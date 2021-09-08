@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    @@include('components/_styles.html')
+</head>
+
+<body>
+    <div class="site-container">
+        @@include('components/_header.html')
+        <main class="main">
+            <section class="step section-banner">
+                <div class="container">
+                    <div class="step__inner">
+                        <div class="section-banner__title">Верификация</div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="verification">
+                <div class="container verification-container">
+                    <div class="verification__title">Пройти фото верификацию</div>
+                    <div class="photo-do">
+                        <div class="photo-do__tab-body" data-tab="0">
+                            <div class="photo-do__body">
+                                <div class="photo-do__item show">
+                                    <img class="photo-1" src="img/photo.png" alt="">
+                                </div>
+                            </div>
+                            <div class="photo-do__descrition"></div>
+                            <button id="start-verification" class="btn photo-do__btn" data-photo="1">Начать</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="photo-popup">
+                <div class="photo-popup__inner">
+                    <div class="photo-popup__body">
+                        <div class="photo-popup__title">Фотоверификация</div>
+                        <div class="photo-popup__subtitle">Ожидайте начала идентификации</div>
+                        <div class="photo-popup__instruction">
+                            <img src="./img/photo-instruction/man_1.svg" alt="">
+                            <p>Улыбнитесь</p>
+                        </div>
+                        <div class="photo-popup__img-body">
+                            <div class="photo-popup__img">
+                                <video id="video" width="430" height="263" autoplay></video>
+                                <img class="your-photo" src="#" alt="">
+                                <canvas id="canvas" width="430" height="263"></canvas>
+                            </div>
+                        </div>
+                        <div class="photo-popup__descr">Убедитесь, что паспорт хорошо осветлен</div>
+                        <button id="snap" data-photo="do" class="photo-popup__btn btn take-photo">Сделать
+                            фото</button>
+                        <button id="save-snap" data-photo="do" class="photo-popup__btn btn save-photo">Сохранить
+                            фото</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        @@include('components/_footer.html')
+    </div>
+    @@include('components/_scripts.html')
+</body>
+
+</html>

@@ -549,9 +549,27 @@ tabs.on('click', function () {
 
 
 // webcam
-
+const instructionsForMan = [
+    { "img": "./img/photo-instruction/man_1.svg", "text": "Улыбнитесь" },
+    { "img": "./img/photo-instruction/man_2.svg", "text": "Поверните голову влево" },
+    { "img": "./img/photo-instruction/man_3.svg", "text": "Покажите кулак" },
+    { "img": "./img/photo-instruction/man_4.svg", "text": "Покажите ладонь" },
+    { "img": "./img/photo-instruction/man_5.svg", "text": "Покажите два пальца" },
+    { "img": "./img/photo-instruction/man_6.svg", "text": "Откройте глаза" },
+    { "img": "./img/photo-instruction/man_7.svg", "text": "Супер! Идем дальше!" },
+    { "img": "./img/photo-instruction/man_8.svg", "text": "Упс! Попробуйте еще раз!" },
+];
+const instructionsForWoman = [
+    { "img": "./img/photo-instruction/woman_1.svg", "text": "Улыбнитесь" },
+    { "img": "./img/photo-instruction/woman_2.svg", "text": "Поверните голову влево" },
+    { "img": "./img/photo-instruction/woman_3.svg", "text": "Покажите кулак" },
+    { "img": "./img/photo-instruction/woman_4.svg", "text": "Покажите ладонь" },
+    { "img": "./img/photo-instruction/woman_5.svg", "text": "Покажите два пальца" },
+    { "img": "./img/photo-instruction/woman_6.svg", "text": "Откройте глаза" },
+    { "img": "./img/photo-instruction/woman_7.svg", "text": "Супер! Идем дальше!" },
+    { "img": "./img/photo-instruction/woman_8.svg", "text": "Упс! Попробуйте еще раз!" },
+]
 const video = document.querySelector('#video');
-
 
 if (video) {
     const canvas = document.querySelector('#canvas');
@@ -567,6 +585,10 @@ if (video) {
     const photoFour = document.querySelector('.photo-4')
     const photoFive = document.querySelector('.photo-5')
     const NewPhotoBtn = document.querySelectorAll('.photo-newDo__btn')
+    const startVerification = document.querySelector("#start-verification")
+    const verificationInstruction = document.querySelector(".photo-popup__instruction")
+
+
 
     // Получаем доступ к камере
     openPhotoBtn.forEach(el => {
@@ -653,6 +675,24 @@ if (video) {
         }
         photoPopup.classList.remove('show')
     })
+    startVerification.addEventListener('click', function () {
+        function changeInstruction(i) {
+            console.log(instructionsForMan[i]);
+            if (i < instructionsForMan.length) {
+                setInterval(function () {
+                    // console.log(instructionsForMan[i]);
+                    verificationInstruction.innerHTML = `
+                    <img src="${instructionsForMan[i].img}" alt="">
+                    <p>${instructionsForMan[i].text}</p>
+                    `
+                    i++;
+                }, 1000);
+            }
+        }
+
+        changeInstruction(0);
+    })
+
 }
 
 // webcam
