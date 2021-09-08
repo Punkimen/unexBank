@@ -23,62 +23,103 @@
                     <form id='step_1-5' class="form-registration" action="#">
                         <div class="reg__wrapper">
                             <div class="reg__step-items">
-                                <div class="reg__step-item reg__step-code active" data-step='2'>
+                                <div class="reg__step-item reg__step-code " data-step='2'>
                                     <h3 class="reg__form-title">Личные данные</h3>
-                                    <div class="reg__form">
+                                    <div class="reg__form reg__form--grid">
                                         <div class="reg__form-left">
-                                            <div class="reg__input">
-                                                <label class="form__title" for="surname">Фамилия</label>
-                                                <input type="name" name="surname" placeholder="Введите фамилию">
+                                            <div class="reg__form-shadow-block">
+                                                <div class="reg__form-subtitle">Семья</div>
+                                                <div class="reg__input--row">
+                                                    <div class="select reg__input">
+                                                        <label class="form__title" for="status">Семейное
+                                                            положение</label>
+                                                        <select name="status">
+                                                            <option value="" hidden disabled selected>Выберите
+                                                            </option>
+                                                            <option>Холост</option>
+                                                            <option>В браке</option>
+                                                        </select>
+                                                        <div class="select_arrow">
+                                                        </div>
+                                                    </div>
+                                                    <div class="reg__input">
+                                                        <label class="form__title" for="">Количество детей и лиц
+                                                            на содержании</label>
+                                                        <input type="name" name="equalPersonOnUpkeep"
+                                                            placeholder="Введите количество">
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="reg__input">
-                                                <label class="form__title" for="name">Имя</label>
-                                                <input type="name" name="name" placeholder="Введите имя">
-                                            </div>
-                                            <div class="reg__input">
-                                                <label class="form__title" for="middleName">Отчество</label>
-                                                <input type="name" name="middleName" placeholder="Введите отчество">
-                                            </div>
-                                            <div class="reg__input">
-                                                <label class="form__title" for="middleName">ИНН</label>
-                                                <input type="text" name="INN" placeholder="ХХХХХХХХХХ">
+                                            <div class="reg__form-shadow-block ">
+                                                <div class="reg__form-subtitle text-center">Паспортные данные</div>
+                                                <div class="passport-data" name="passport">
+                                                    <div class="passport__type">
+                                                        <div class="type-title form__title">Тип паспорта</div>
+                                                        <div class="passport__type-inner">
+                                                            <label class="control control-radio">
+                                                                Книжка
+                                                                <input class='typePassport' id="radio_passport"
+                                                                    type="radio" name="radioPassport" value="passport"
+                                                                    checked="checked" />
+                                                                <div class="control_indicator"></div>
+                                                            </label>
+                                                            <label class="control control-radio">
+                                                                ID-карта
+                                                                <input class='typePassport' id="radio_idCard"
+                                                                    value="idCard" type="radio" name="radioPassport" />
+                                                                <div class="control_indicator"></div>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="passport__inner">
+                                                        <div class="passport__series reg__input--rowReverse">
+                                                            <div class="reg__input">
+                                                                <label class="form__title" for="series">Серия</label>
+                                                                <input maxlength="4" type="text" placeholder="XX"
+                                                                    name="series">
+                                                            </div>
+                                                            <div class="reg__input">
+                                                                <label class="form__title"
+                                                                    for="passportNum">Номер</label>
+                                                                <input maxlength="6" placeholder="XXXXXX" type="text"
+                                                                    name="passportNum">
+                                                            </div>
+                                                        </div>
+                                                        <div class="reg__input">
+                                                            <label class="form__title" for="passportDate">Дата
+                                                                выдачи</label>
+                                                            <input type="date" placeholder="01.01.1989"
+                                                                name="passportDate">
+                                                        </div>
+                                                        <div class="reg__input">
+                                                            <label class="form__title" for="issued">Кем
+                                                                выдан</label>
+                                                            <input maxlength="6"
+                                                                placeholder="Введите название уполномоченного органа"
+                                                                type="text" name="issued">
+                                                        </div>
+                                                    </div>
+                                                    <div class="idCard__inner">
+                                                        <div class="reg__input idCard__issued">
+                                                            <label class="form__title">ID-карта*</label>
+                                                            <input type="text" name="IDCard">
+
+                                                        </div>
+                                                        <div class="reg__input idCard__inn">
+                                                            <label class="form__title" for="inn">Номер ИИН*</label>
+                                                            <input maxlength="12" type="text" name="inn">
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="reg__form-right ">
-                                            <div class="reg__form-subtitle">Дата рождения</div>
-                                            <div class="reg__input">
-                                                <label class="form__title" for="bornDate">Дата</label>
-                                                <input type="date" name="bornDate">
-                                            </div>
-                                            <div class="reg__input">
-                                                <label class="form__title form__title--hint" for="placeBorn">Место
-                                                    рождения
-                                                    <button class="btn-reset btn-hint">
-                                                        <svg class="">
-                                                            <use xlink:href="./img/icons/icons.svg#hint"></use>
-                                                        </svg>
-                                                    </button>
-                                                </label>
-                                                <input type="text" placeholder="Введите название " name="placeBorn">
-                                            </div>
-                                            <div class="reg__form-subtitle">Семья</div>
-                                            <div class="reg__input--equal">
+                                        <div class="reg__form-right flex-column">
+                                            <div class="reg__form-shadow-block ">
+                                                <div class="reg__form-subtitle">Образование</div>
                                                 <div class="select reg__input">
-                                                    <label class="form__title" for="status">Семейное положение</label>
-                                                    <select name="status">
-                                                        <option value="" hidden disabled selected>Выберите
-                                                        </option>
-                                                        <option>Холост</option>
-                                                        <option>В браке</option>
-                                                    </select>
-                                                    <div class="select_arrow">
-                                                    </div>
-
-                                                </div>
-                                                <div class="select reg__input">
-                                                    <label class="form__title" for="education">Уровень
+                                                    <label class="form__title" for="levelEducation">Уровень
                                                         образования</label>
-                                                    <select name="education">
+                                                    <select name="levelEducation">
                                                         <option value="" hidden disabled selected>Выберите
                                                         </option>
                                                         <option>Высшее</option>
@@ -86,73 +127,64 @@
                                                     </select>
                                                     <div class="select_arrow">
                                                     </div>
-
                                                 </div>
                                             </div>
-                                            <div class="reg__input">
-                                                <label class="form__title" for="child">Количество детей и лиц на
-                                                    содержании</label>
-                                                <input type="name" name="child" required>
+                                            <div class="reg__form-shadow-block reg__form-shadow-block--grow ">
+                                                <div class="reg__form-subtitle">Адрес регистрации</div>
+                                                <div class="reg__input">
+                                                    <label class="form__title" for="cityName">Название населенного
+                                                        пункта</label>
+                                                    <input type="text" placeholder="Введите название" name="cityName">
+                                                </div>
+                                                <div class="reg__input">
+                                                    <label class="form__title" for="streetName">Улица</label>
+                                                    <input type="text" placeholder="Введите название" name="streetName">
+                                                </div>
+                                                <div class="reg__input--three">
+                                                    <div class="reg__input street-name">
+                                                        <label class="form__title" for="home">Номер дома</label>
+                                                        <input type="text" name="home">
+                                                    </div>
+                                                    <div class="reg__input street-name">
+                                                        <label class="form__title" for="corp">Корпус</label>
+                                                        <input type="text" name="corp">
+                                                    </div>
+                                                    <div class="reg__input street-name">
+                                                        <label class="form__title" for="appart">Квартира</label>
+                                                        <input type="text" name="appart">
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="reg__step-item reg__step-code " data-step='3'>
-                                    <h3 class="reg__form-title">Паспортные данные</h3>
-                                    <div class="reg__form">
-                                        <div class="reg__form-left">
-                                            <div class="passport-data" name="passport">
-                                                <div class="passport__type">
-                                                    <div class="type-title form__title">Тип паспорта</div>
-                                                    <div class="passport__type-inner">
-                                                        <label class="control control-radio">
-                                                            Книжка
-                                                            <input class='typePassport' id="radio_passport" type="radio"
-                                                                name="radio" value="passport" checked="checked" />
-                                                            <div class="control_indicator"></div>
-                                                        </label>
-                                                        <label class="control control-radio">
-                                                            ID-карта
-                                                            <input class='typePassport' id="radio_idCard" value="idCard"
-                                                                type="radio" name="radio" />
-                                                            <div class="control_indicator"></div>
-                                                        </label>
-                                                    </div>
+                                    <div class="form__adress-btn">
+                                        <h3 class="reg__form-title reg__form-title--outher">Фактический адрес</h3>
+                                        <div class="control-group control-checkbox--adress">
+                                            <label class="control control-switch">
+                                                <div class="contol-group-text">Совпадает с адресом регистрации</div>
+                                                <div class="onoffswitch">
+                                                    <input id="adress-switch" type="checkbox" name="onoffswitch"
+                                                        class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0"
+                                                        checked>
+                                                    <label class="onoffswitch-label" for="myonoffswitch">
+                                                        <span class="onoffswitch-inner"></span>
+                                                        <span class="onoffswitch-switch"></span>
+                                                    </label>
                                                 </div>
-                                                <div class="passport__inner">
-                                                    <div class="passport__series reg__input--rowReverse">
-                                                        <div class="reg__input passport__series-ser">
-                                                            <label class="form__title" for="series">Серия*</label>
-                                                            <input maxlength="4" type="text" name="series">
-                                                        </div>
-                                                        <div class="reg__input passport__series-num">
-                                                            <label class="form__title" for="passportNum">Номер*</label>
-                                                            <input maxlength="6" type="text" name="passportNum">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="idCard__inner">
-                                                    <div class="reg__input idCard__issued">
-                                                        <label class="form__title">ID-карта*</label>
-                                                        <input type="text" name="IDCard">
-
-                                                    </div>
-                                                    <div class="reg__input idCard__inn">
-                                                        <label class="form__title" for="inn">Номер ИИН*</label>
-                                                        <input maxlength="12" type="text" name="inn">
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </label>
                                         </div>
-                                        <div class="reg__form-right">
-                                            <div class="reg__input street-name">
-                                                <label class="form__title" for="populated-area">Название населенного
+                                    </div>
+                                    <div id="actual-address" class="reg__form reg__form--grid">
+                                        <div class="reg__form-shadow-block reg__form-shadow-block--grow ">
+                                            <div class="reg__form-subtitle">Адрес регистрации</div>
+                                            <div class="reg__input">
+                                                <label class="form__title" for="cityName">Название населенного
                                                     пункта</label>
-                                                <input type="text" name="populated-area" placeholder="Введите название">
+                                                <input type="text" placeholder="Введите название" name="cityName">
                                             </div>
-                                            <div class="reg__input street-name">
-                                                <label class="form__title" for="steet">Улица</label>
-                                                <input type="text" name="steet" placeholder="Введите название">
+                                            <div class="reg__input">
+                                                <label class="form__title" for="streetName">Улица</label>
+                                                <input type="text" placeholder="Введите название" name="streetName">
                                             </div>
                                             <div class="reg__input--three">
                                                 <div class="reg__input street-name">
@@ -170,163 +202,158 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="form__adress-btn">
-                                        <h3 class="reg__form-title">Адрес регистрации</h3>
-                                        <div class="control-group control-checkbox--adress">
-                                            <label class="control control-switch">
-                                                <div class="contol-group-text">Совпадает с адресом проживания</div>
-                                                <div class="onoffswitch">
-                                                    <input type="checkbox" name="onoffswitch"
-                                                        class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0"
-                                                        checked>
-                                                    <label class="onoffswitch-label" for="myonoffswitch">
-                                                        <span class="onoffswitch-inner"></span>
-                                                        <span class="onoffswitch-switch"></span>
-                                                    </label>
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
+
                                 </div>
-                                <div class="reg__step-item reg__step-code " data-step='4'>
+                                <div class="reg__step-item reg__step-code " data-step='3'>
                                     <h3 class="reg__form-title">Работа и доходы</h3>
                                     <div class="reg__form">
                                         <div class="reg__form-left">
-                                            <div class="reg__form-subtitle">О компании</div>
-                                            <div class="reg__input work-name">
-                                                <label class="form__title" for="nameWork">Название
-                                                    предприятия</label>
-                                                <input type="text" placeholder="Введите название" name="nameWork">
-                                            </div>
-                                            <div class="reg__input">
-                                                <div class="reg__input select">
-                                                    <label class="form__title" for="industry">Сфера деятельности</label>
-                                                    <select name="industry">
-                                                        <option value="" hidden disabled selected>Выберите из списка
+                                            <div class="reg__form-shadow-block">
+                                                <div class="reg__form-subtitle">О компании</div>
+                                                <div class="reg__input">
+                                                    <label class="form__title" for="">Название предприятия</label>
+                                                    <input type="name" name="companyName"
+                                                        placeholder="Введите название">
+                                                </div>
+                                                <div class="select reg__input">
+                                                    <label class="form__title" for="fieldOfActivity">Сфера
+                                                        деятельности</label>
+                                                    <select name="fieldOfActivity">
+                                                        <option value="" hidden disabled selected>Выберите
                                                         </option>
-                                                        <option class="ndustry-option" value="1">Сфера деятельности
-                                                        </option>
-                                                        <option class="ndustry-option" value="2">Сфера деятельности
-                                                        </option>
+                                                        <option>1</option>
+                                                        <option>2</option>
                                                     </select>
                                                     <div class="select_arrow">
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="reg__input work-name">
-                                                <label class="form__title form__title--hint" for="workPhone">Телефон
-                                                    компании
-                                                    <button class="btn-reset btn-hint">
-                                                        <svg class="">
-                                                            <use xlink:href="./img/icons/icons.svg#hint"></use>
-                                                        </svg>
-                                                    </button>
-                                                </label>
-                                                <input type="text" placeholder="+38 (0ХХ) ХХХ-ХХ-ХХ" name="workPhone">
-                                            </div>
-                                            <div class="reg__form-subtitle">Доходы</div>
-                                            <div class="reg__input--equal">
                                                 <div class="reg__input">
-                                                    <label class=" form__title" for="workPhone">Заработная плата
-                                                        (основное место работы)</label>
-                                                    <input type="text" placeholder="Введите" name="main-income">
+                                                    <label class="form__title form__title--hint" for="workPhone">Телефон
+                                                        компании
+                                                        <button class="btn-reset btn-hint">
+                                                            <svg class="">
+                                                                <use xlink:href="./img/icons/icons.svg#hint"></use>
+                                                            </svg>
+                                                        </button>
+                                                    </label>
+                                                    <input type="tel" placeholder="+38 (0ХХ) ХХХ-ХХ-ХХ"
+                                                        name="workPhone">
                                                 </div>
-                                                <div class="reg__input">
-                                                    <label class=" form__title" for="workPhone">Дополнительный
-                                                        доход</label>
-                                                    <input type="text" placeholder="Введите" name="additional-income">
+                                            </div>
+                                            <div class="reg__form-shadow-block">
+                                                <div class="reg__form-subtitle">Доходы</div>
+                                                <div class="reg__input--row">
+                                                    <div class="reg__input">
+                                                        <label class="form__title form__title" for="">Заработная плата
+                                                            (основное место работы)
+                                                        </label>
+                                                        <input type="text" placeholder="Введите" name="workIncome">
+                                                    </div>
+                                                    <div class="reg__input">
+                                                        <label class="form__title form__title" for="">Дополнительный
+                                                            доход
+                                                        </label>
+                                                        <input type="text" placeholder="Введите"
+                                                            name="additionalIncome">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="reg__form-right">
-                                            <div class="reg__form-subtitle">Дата начала работы в компании</div>
-                                            <div class="reg__input--row">
+                                            <div class="reg__form-shadow-block">
+                                                <div class="reg__form-subtitle">Дата начала работы в компании</div>
+                                                <div class="reg__input--row">
+                                                    <div class="reg__input select">
+                                                        <label class="form__title" for="mounth-workStart">Месяц</label>
+                                                        <select name="mounth-workStart">
+                                                            <option value="" hidden disabled selected>Январь
+                                                            </option>
+                                                            <option class="ndustry-option" value="1">Январь
+                                                            </option>
+                                                            <option class="ndustry-option" value="2">Январь
+                                                            </option>
+                                                        </select>
+                                                        <div class="select_arrow">
+                                                        </div>
+                                                    </div>
+                                                    <div class="reg__input select">
+                                                        <label class="form__title" for="year-workStart">Год</label>
+                                                        <select name="year-workStart">
+                                                            <option value="" hidden disabled selected>1920
+                                                            </option>
+                                                            <option class="ndustry-option" value="1">1920
+                                                            </option>
+                                                            <option class="ndustry-option" value="2">1920
+                                                            </option>
+                                                        </select>
+                                                        <div class="select_arrow">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="reg__form-shadow-block">
+                                                <div class="reg__form-subtitle">Занимаемая должность</div>
                                                 <div class="reg__input select">
-                                                    <label class="form__title" for="positionCat">Месяц</label>
-                                                    <select name="mounth-workStart">
-                                                        <option value="" selected>Январь
+                                                    <label class="form__title" for="year-workStart">Уровень
+                                                        должности</label>
+                                                    <select name="year-workStart">
+                                                        <option value="" hidden disabled selected>Выберите из списка
                                                         </option>
-                                                        <option class="employment-option" value="1">Январь
+                                                        <option class="ndustry-option" value="1">Должность
+                                                        </option>
+                                                        <option class="ndustry-option" value="2">Должность
                                                         </option>
                                                     </select>
                                                     <div class="select_arrow">
                                                     </div>
-
-                                                </div>
-                                                <div class="reg__input select">
-                                                    <label class="form__title" for="specialty">Год</label>
-                                                    <select name="year-workStart">
-                                                        <option value="" hidden disabled selected>1920
-                                                        </option>
-                                                        <option class="ndustry-option" value="1">1920
-                                                        </option>
-                                                        <option class="ndustry-option" value="2">1920
-                                                        </option>
-                                                        <option class="ndustry-option" value="3">1920
-                                                        </option>
-                                                    </select>
-                                                    <div class="select_arrow"> </div>
-
                                                 </div>
                                             </div>
-                                            <div class="reg__form-subtitle">Занимаемая должность</div>
-                                            <div class="reg__input select">
-                                                <label class="form__title" for="levelWork">Уровень должности</label>
-                                                <select name="levelWork">
-                                                    <option value="" hidden disabled selected>Выберите из списка
-                                                    </option>
-                                                    <option class="ndustry-option" value="1">Московская область
-                                                    </option>
-                                                    <option class="ndustry-option" value="2">Амурская область
-                                                    </option>
-                                                </select>
-                                                <div class="select_arrow">
+                                            <div class="reg__form-shadow-block">
+                                                <div class="reg__form-subtitle">Имущество</div>
+                                                <div class="reg__input--equal">
+                                                    <label class="control control-group__item control-checkbox block">
+                                                        <div class="contol-group__text">Автомобиль</div>
+                                                        <input type="checkbox" name="checkbox" />
+                                                        <div class="control_indicator"></div>
+                                                    </label>
+                                                    <label class="control control-group__item control-checkbox block">
+                                                        <div class="contol-group__text">Дом/ квартира</div>
+                                                        <input type="checkbox" name="checkbox" />
+                                                        <div class="control_indicator"></div>
+                                                    </label>
                                                 </div>
-                                            </div>
-                                            <div class="street-home reg__input">
-                                                <label class="form__title" for="workPost">Должность</label>
-                                                <input type="text" name="workPost"
-                                                    placeholder="Введите называние должности">
 
-                                            </div>
-                                            <div class="reg__form-subtitle">Имущество</div>
-                                            <div class="reg__input--equal">
-                                                <label class="control control-group__item control-checkbox block">
-                                                    <div class="contol-group__text">Автомобиль</div>
-                                                    <input type="checkbox" name="checkbox" />
-                                                    <div class="control_indicator"></div>
-                                                </label>
-                                                <label class="control control-group__item control-checkbox block">
-                                                    <div class="contol-group__text">Дом/ квартира</div>
-                                                    <input type="checkbox" name="checkbox" />
-                                                    <div class="control_indicator"></div>
-                                                </label>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="reg__step-item reg__step-code " data-step='5'>
+                                <div class="reg__step-item reg__step-code active" data-step='4'>
                                     <h3 class="reg__form-title">Дополнительная информация</h3>
                                     <div class="reg__form">
                                         <div class="reg__form-left">
-                                            <div class="reg__form-subtitle">Финансовые обязательства по кредитам</div>
-                                            <div class="reg__input--equal">
-                                                <div class="reg__input">
-                                                    <label class="form__title" for="equalSumm">Общая сумма</label>
-                                                    <input type="text" name="equalSumm" placeholder="Введите сумму">
+                                            <div class="reg__form-shadow-block">
+                                                <div class="reg__form-subtitle">Финансовые обязательства по кредитам
                                                 </div>
-                                                <div class="reg__input">
-                                                    <label class="form__title" for="mounthPay">Ежемесячные
-                                                        платежи</label>
-                                                    <input type="text" name="mounthPay" placeholder="Введите сумму">
+                                                <div class="reg__input--equal">
+                                                    <div class="reg__input">
+                                                        <label class="form__title" for="equalSumm">Общая сумма</label>
+                                                        <input type="text" name="equalSumm" placeholder="Введите сумму">
+                                                    </div>
+                                                    <div class="reg__input">
+                                                        <label class="form__title" for="mounthPay">Ежемесячные
+                                                            платежи</label>
+                                                        <input type="text" name="mounthPay" placeholder="Введите сумму">
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="reg__form-right">
-                                            <div class="reg__form-subtitle">Контакты</div>
-                                            <div class="reg__input">
-                                                <label class="form__title" for="E-mail">E-mail</label>
-                                                <input type="email" name="E-mail" placeholder="Введите email">
+                                            <div class="reg__form-shadow-block">
+                                                <div class="reg__form-subtitle">Электронная почта</div>
+                                                <div class="reg__input">
+                                                    <label class="form__title" for="E-mail">E-mail</label>
+                                                    <input type="email" name="E-mail" placeholder="Введите email">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>

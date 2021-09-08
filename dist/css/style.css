@@ -850,6 +850,14 @@ select:focus {
   display: none;
 }
 
+#actual-address {
+  display: none;
+}
+
+#actual-address.show {
+  display: grid;
+}
+
 .mr-0 {
   margin-right: 0 !important;
 }
@@ -879,6 +887,7 @@ select:focus {
 }
 
 .onoffswitch {
+  pointer-events: none;
   position: relative;
   width: 40px;
   -webkit-user-select: none;
@@ -987,6 +996,12 @@ select:focus {
 
 .btn-addContacts img {
   margin-bottom: 15px;
+}
+
+.blue {
+  position: relative;
+  z-index: 9;
+  color: #4FB6F9;
 }
 
 .header {
@@ -2022,7 +2037,7 @@ select:focus {
 .reg__wrapper {
   min-height: 607px;
   width: 100%;
-  padding: 45px;
+  padding: 45px 40px;
   background: #fff;
   box-shadow: 0px 8px 45px rgba(81, 45, 168, 0.03);
   border-radius: 5px;
@@ -2070,12 +2085,39 @@ select:focus {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 15px;
+}
+
+.reg__form--stretch {
+  align-items: stretch;
+}
+
+.reg__form--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 38px;
+}
+
+.reg__form--grid .flex-column {
+  height: 100%;
+}
+
+.reg__form-shadow-block {
+  padding: 40px 35px;
+  background: #fff;
+  border: 1px solid #f4f4f9;
+  box-shadow: 0px 8px 45px rgba(81, 45, 168, 0.03);
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+.reg__form-shadow-block--grow {
+  flex-grow: 1;
 }
 
 .reg__form-left {
   width: 100%;
-  margin-right: 70px;
+  margin-right: 35px;
 }
 
 .reg__form-title {
@@ -2086,8 +2128,12 @@ select:focus {
   margin-bottom: 45px;
 }
 
+.reg__form-title--outher {
+  margin-bottom: 15px;
+}
+
 .reg__form-subtitle {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14px;
   line-height: 22px;
   color: #333;
@@ -2135,6 +2181,16 @@ select:focus {
 
 .reg__form-right {
   width: 100%;
+}
+
+.reg .flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reg__form-accept {
+  margin-bottom: 70px;
 }
 
 .reg__form-btns {
@@ -2240,6 +2296,10 @@ select:focus {
 .form__title--hint {
   display: flex;
   align-items: center;
+}
+
+.passport__type-inner {
+  height: 40px;
 }
 
 .passport__type-inner .control:not(:last-child) {
@@ -4798,6 +4858,10 @@ select:focus {
     margin-bottom: 50px;
   }
 
+  .reg__form--grid {
+    display: block;
+  }
+
   .reg__form {
     display: block;
   }
@@ -4880,6 +4944,12 @@ select:focus {
 
   .footer-docs__list {
     margin-right: 30px;
+  }
+}
+
+@media (max-width: 992) {
+  #actual-address.show {
+    display: block;
   }
 }
 
@@ -5015,6 +5085,10 @@ select:focus {
   .reg__title {
     font-size: 15px;
     margin-bottom: 30px;
+  }
+
+  .reg__form-shadow-block {
+    padding: 35px 15px;
   }
 
   .ident__inner-block {

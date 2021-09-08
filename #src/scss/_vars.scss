@@ -560,6 +560,18 @@ select {
     display: none;
 }
 
+#actual-address {
+    display: none;
+
+    &.show {
+        display: grid;
+
+        @media(max-width: $md3) {
+            display: block;
+        }
+    }
+}
+
 // margins
 
 .mr-0 {
@@ -592,6 +604,7 @@ select {
 
 // switch 
 .onoffswitch {
+    pointer-events: none;
     position: relative;
     width: 40px;
     -webkit-user-select: none;
@@ -706,4 +719,10 @@ select {
     img {
         margin-bottom: 15px;
     }
+}
+
+.blue {
+    position: relative;
+    z-index: 9;
+    color: $colorBlue;
 }

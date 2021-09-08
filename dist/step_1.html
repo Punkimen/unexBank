@@ -124,33 +124,64 @@
             <section class="reg">
                 <div class="container reg-container">
                     <div class="reg__wrapper">
-                        <div class="reg__step-item active">
-                            <form class="step_1" id="step_1">
-                                <div class="reg__form mb-0">
-                                    <div class="reg__form-left mr-0">
-                                        <h3 class="reg__form-title">Финансовый номер</h3>
+                        <div class="reg__step-item reg__step-code active" data-step='2'>
+                            <h3 class="reg__form-title">Регистрационные данные</h3>
+                            <form id="step_1" action="">
+                                <div class="reg__form reg__form--stretch">
+                                    <div class="reg__form-left reg__form-shadow-block">
+                                        <div class="reg__form-subtitle">Фамилия имя и отчество</div>
                                         <div class="reg__input">
-                                            <label class="form__title" for="phone">
-                                                Мобильный номер
-                                            </label>
-                                            <input type="tel" name="phone" placeholder="+38 (0ХХ) ХХХ-ХХ-ХХ" required>
+                                            <label class="form__title" for="surname">Фамилия</label>
+                                            <input type="name" name="surname" placeholder="Введите фамилию">
+                                        </div>
+                                        <div class="reg__input">
+                                            <label class="form__title" for="name">Имя</label>
+                                            <input type="name" name="name" placeholder="Введите имя">
+                                        </div>
+                                        <div class="reg__input">
+                                            <label class="form__title" for="middleName">Отчество</label>
+                                            <input type="name" name="middleName" placeholder="Введите отчество">
+                                        </div>
+                                    </div>
+                                    <div class="reg__form-right flex-column reg__form-shadow-block">
+                                        <div class="reg__form-block">
+                                            <div class="reg__form-subtitle">Мобильный телефон</div>
+                                            <div class="reg__input">
+                                                <label class="form__title" for="personal-phone">Мобильный номер</label>
+                                                <input type="tel" class="input-phone" placeholder="+38 (0ХХ) ХХХ-ХХ-ХХ"
+                                                    name="personal-phone">
+                                            </div>
+                                        </div>
+                                        <div class="reg__form-block">
+                                            <div class="reg__form-subtitle">Дата рождения</div>
+                                            <div class="reg__input">
+                                                <label class="form__title" for="bornDate">Дата рождения</label>
+                                                <input type="date" placeholder="01.01.1989" name="bornDate">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="control-group">
+                                <div class="reg__form-accept reg__form-shadow-block">
+                                    <div class="reg__form-subtitle">Согласие на обработку персональных данных</div>
                                     <label class="control control-group__item control-checkbox">
-                                        <div class="contol-group__text">Согласие на обработку персональных данных
-                                        </div>
-                                        <input type="checkbox" required />
+                                        <div class="contol-group__text">Дозволяю обробку персональних даних згідно <a
+                                                href="#" class="blue">Умов
+                                                Банку</a> та погоджуюсь з умовами оформлення заявки</div>
+                                        <input type="checkbox" name="checkbox" />
                                         <div class="control_indicator"></div>
                                     </label>
                                 </div>
                                 <div class="reg__form-btns">
-                                    <button class="reg__form-btn btn">Продолжить</button>
-                                    <a class="reg__form-back" href="#">Вернуться назад</a>
+                                    <button type="button" id="step__btn-next"
+                                        class="reg__form-btn btn">Продолжить</button>
+                                    <button type="submit" id="submitBtn" class="reg__form-btn btn">Другая
+                                        кнопка</button>
+                                    <a id="step__btn-prev" class="reg__form-back" href="#">Вернуться назад</a>
                                 </div>
                             </form>
                         </div>
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="footer">
