@@ -59,6 +59,10 @@
     line-height: 20px;
     color: #333;
 
+    &:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
     @media(max-width: $md5 + px) {
         font-size: 12px;
     }
@@ -140,6 +144,7 @@
 }
 
 .login__form-item label {
+    text-align: left;
     display: block;
     font-size: 12px;
     line-height: 13px;
@@ -159,6 +164,80 @@
     border-bottom: 1px dotted #A4A4A4;
 }
 
+.login__sms-code {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    text-align: left;
+    text-decoration: underline;
+    text-decoration-style: dashed;
+    font-size: 14px;
+    line-height: 20px;
+    color: #CA0000;
+
+    &:hover {
+        .login__sms-info {
+            display: block;
+        }
+    }
+}
+
+.login__sms-info {
+    padding: 21px 28px 21px;
+    max-width: 361px;
+    width: 100%;
+    position: absolute;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    font-size: 12px;
+    line-height: 20px;
+    color: #333;
+    bottom: 25px;
+    right: -15px;
+    display: none;
+
+    &::before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 17px 18px 17px;
+        border-color: transparent transparent #ffffff transparent;
+        position: absolute;
+        right: 20px;
+        bottom: -10px;
+        transform: rotate(180deg);
+    }
+}
+
+.popup__login-or {
+    text-align: center;
+    padding: 15px 0 13px;
+}
+
+.popup__login-outher {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+
+
+.popup__login-outher-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+        display: block;
+    }
+
+    span {
+        font-size: 10px;
+        line-height: 14px;
+        color: #A4A4A4;
+    }
+}
 
 .login-btn {
     display: block;

@@ -23,8 +23,14 @@
     <a class="popup-modal" href="#popup__promoErr">8</a>
     <a class="popup-modal" href="#popup__verification-timer">9</a>
     <a class="popup-modal" href="#popup__verification">10</a>
+    <a class="popup-modal" href="#credit__contract">11</a>
+    <a class="popup-modal" href="#credit__contract-code">12</a>
+    <a class="popup-modal" href="#credit__contract-congr">13</a>
     <div class="popups">
         <div id="popup__sent" class="popup__sent popup">
+            <div class="popup__smile">
+                <img src="../img/icon/smile-happy.svg" alt="">
+            </div>
             <div class="popup__title">Ваша заявка отправлена</div>
             <div class="sent__text popup__text">Ваша заявка отправлена на проверку! Вы получите сообщение, как
                 только
@@ -36,6 +42,9 @@
         </div>
 
         <div id="popup__mistake" class="popup__mistake popup">
+            <div class="popup__smile">
+                <img src="../img/icon/smile-sad.svg" alt="">
+            </div>
             <div class="popup__title">Ошибка отправки</div>
             <div class="sent__text popup__text">При отправке заявки возникли проблемы, пожалуйста, попробуйте
                 еще
@@ -47,20 +56,29 @@
         </div>
 
         <div id="popup__congr-1" class="popup__congr popup">
+            <div class="popup__smile">
+                <img src="../img/icon/smile-happy.svg" alt="">
+            </div>
             <div class="popup__title">Поздравляем!</div>
-            <div class="sent__text popup__text">Ваш кредит одобрен! Все данные по кредиту вы можете посмотреть в
-                личном
-                кабинете!
+            <div class="sent__text popup__text">Ваш кредит на сумму <span class="bold red">4500 грн</span> одобрен!
+            </div>
+            <div class="sent__text popup__text">Чтобы получить ваши деньги, зайдите на почту, указанную Вами ранее.
             </div>
             <a href="#" class="popup-btn btn  btn-bg">
                 Перейти в кабинет
             </a>
+            <div class="login__register">
+                <a href="#" class="login__regist">Отказаться</a>
+            </div>
             <a href="#" class="popup__exit">
                 <img src="img/exitBig.png" alt="">
             </a>
         </div>
 
         <div id="popup__congr-2" class="popup__congr popup">
+            <div class="popup__smile">
+                <img src="../img/icon/smile-happy.svg" alt="">
+            </div>
             <div class="popup__title">Поздравляем!</div>
             <div class="sent__text popup__text">Ваш кредит одобрен!
             </div>
@@ -73,6 +91,9 @@
         </div>
 
         <div id="popup__sorry" class="popup__sorry popup">
+            <div class="popup__smile">
+                <img src="../img/icon/smile-sad.svg" alt="">
+            </div>
             <div class="popup__title">Сожалеем!</div>
             <div class="sent__text popup__text">Ваш кредит не был одобрен. Вы можете подать повторную заявку
                 через
@@ -92,18 +113,32 @@
                 <form class="login__form">
                     <div class="login__form-item">
                         <label>Номер телефона*</label>
-                        <input type="phone">
+                        <input type="phone" placeholder="+38 099 123 12 13" name="phone">
                     </div>
                     <div class="login__form-item">
-                        <label>Пароль*</label>
-                        <input>
+                        <label>Введите код одноразового идентификатора из СМС-сообщения*</label>
+                        <input type="text" placeholder="Введите код из СМС" name="sms-code">
                     </div>
-                    <a href="#" class="login__forgot">Забыли пароль?</a>
+                    <a href="#" class="login__sms-code">Не получили смс с кодом?
+                        <div class="login__sms-info">Если в течении 5 минут Вы не получили смс, обратитесь в службу
+                            поддержки по номеру 8 800 950 123.</div>
+                    </a>
                     <a href="#" class="popup-btn btn">Войти</a>
                     <div class="login__register">
                         <a href="#" class="login__regist">Регистрация</a>
                     </div>
                 </form>
+                <div class="popup__login-or">или войти через:</div>
+                <div class="popup__login-outher">
+                    <a class="popup__login-outher-item" href="#">
+                        <img src="img/icon/passport-enter.svg" alt="">
+                        <span>Паспорт</span>
+                    </a>
+                    <a class="popup__login-outher-item" href="#">
+                        <img src="img/icon/bank-enter.svg" alt="">
+                        <span>Bank ID</span>
+                    </a>
+                </div>
             </div>
             <a href="#" class="popup__exit">
                 <img src="img/exitBig.png" alt="">
@@ -153,6 +188,59 @@
                 Ваш аккаунт на этапе проверки. Как только ваш аккаунт будет верифицирован, вы
                 получитеуведомление.
             </div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="credit__contract" class="popup__congr popup">
+            <div class="popup__smile">
+                <img src="../img/icon/smile-happy.svg" alt="">
+            </div>
+            <div class="popup__title">Поздравляем!</div>
+            <div class="sent__text popup__text">Я ознакомлен с <a href="#" class="blue">“Кредитным договором”</a> и
+                подтверждаю свое согласие с
+                условиями <a href="#" class="blue">Договора</a> и понимаю в полном объеме изложенную в нем информацию.
+            </div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                Перейти в кабинет
+            </a>
+            <div class="login__register">
+                <a href="#" class="login__regist">Отказаться</a>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="credit__contract-code" class="popup popup__promo">
+            <div class="popup__title">Кредитный договор</div>
+            <div class="sent__text popup__text">Данным одноразовым идентификатором подписываю <a href="#"
+                    class="blue">Кредитный договор</a> и направляю кредитору сообщение о принятии в полном объеме
+                условий <a href="#" class="blue">Кредитного договора</a>
+            </div>
+            <div class="login__form-item">
+                <form class="login__form">
+                    <div class="login__form-item">
+                        <label>Код*</label>
+                        <input type="text" placeholder="Введите код из СМС" name="sms-code">
+                    </div>
+                    <button href="#" class="popup-btn btn">Подтвердить</button>
+                    <div class="login__register">
+                        <a href="#" class="login__regist">Прислать код еще раз</a>
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="popup__exit">
+                <img src="img/exitBig.png" alt="">
+            </a>
+        </div>
+        <div id="popup__congr-1" class="popup__congr popup">
+            <div class="popup__title">Поздравляем!</div>
+            <div class="sent__text popup__text">Договор подписан! Деньги отправлены на карту!
+                Все данные по кредиту вы можете посмотреть в личном кабинете!
+            </div>
+            <a href="#" class="popup-btn btn  btn-bg">
+                Перейти в кабинет
+            </a>
             <a href="#" class="popup__exit">
                 <img src="img/exitBig.png" alt="">
             </a>
