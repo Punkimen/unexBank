@@ -767,3 +767,27 @@ if (form || form2) {
     temporarily.addValue();
 }
 
+// signature paint
+
+const canvas = document.querySelector('#signature-paint');
+const clear = document.querySelector('.contract-signature__clear');
+const ctx = canvas.getContext('2d');
+
+
+
+// ctx.fillRect(x, y, 5, 5)
+canvas.addEventListener('mousedown', function () {
+    const paint = function (e) {
+        let x = e.offsetX;
+        let y = e.offsetY;
+        ctx.fillRect(x, y, 2, 2)
+    }
+    canvas.addEventListener('mousemove', paint)
+    canvas.addEventListener('mouseup', function () {
+        console.log('w');
+        canvas.removeEventListener('mousemove', paint)
+    })
+})
+clear.addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+})

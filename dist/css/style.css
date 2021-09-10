@@ -2518,6 +2518,36 @@ select:focus {
   transition: all ease .2s;
 }
 
+.contract-title {
+  margin-bottom: 20px;
+}
+
+.contract-info {
+  max-width: 639px;
+  width: 100%;
+  margin: 0 auto 40px;
+}
+
+.contract-signature {
+  max-width: 745px;
+  width: 100%;
+  margin: 0 auto 20px;
+  height: 221px;
+  overflow: hidden;
+  background: #F4F4F4;
+  border: 1px solid #EAECF0;
+  box-shadow: 0px 8px 45px rgba(81, 45, 168, 0.03);
+  border-radius: 5px;
+}
+
+.contract-signature__clear {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #FF0000;
+}
+
 .contract {
   padding: 60px 0;
 }
